@@ -41,6 +41,9 @@
     <p class="uitleg" style="margin-top:4px">
       <button id="stemtest" class="alslink" type="button">Werkt het voorlezen op deze computer?</button>
     </p>
+    <p class="uitleg" style="margin-top:18px">
+      <a class="knop klein stil" href="meester.html">Leerkracht</a>
+    </p>
     <p id="stemuitslag" class="waarschuwing" hidden></p>
   </section>
 
@@ -58,11 +61,8 @@
       <input id="r-voornaam" type="text" required autocomplete="given-name"
              autocapitalize="words" placeholder="zo staat het op je scherm">
 
-      <label for="r-traject">In welke groep werk je?</label>
-      <select id="r-traject" required>
-        <option value="1B">traject 1B</option>
-        <option value="1B-vb">traject 1B-vb</option>
-      </select>
+      <label>In welke groep werk je?</label>
+      <div id="r-traject" class="trajectkeuze" role="group" aria-label="In welke groep werk je?"></div>
 
       <label for="r-wachtwoord">Kies een wachtwoord <span class="zacht">(minstens 6 tekens)</span></label>
       <input id="r-wachtwoord" type="password" required minlength="6" autocomplete="new-password">
@@ -88,7 +88,9 @@
   <!-- ============================================ keuze -->
   <section id="v-keuze" class="vak" hidden>
     <h1>Welk dictee doe je?</h1>
-    <p class="uitleg">Doe eerst de <b>oefening</b>. Lukt dat goed? Dan mag je de <b>toets</b> doen.</p>
+    <p class="uitleg">Klik eerst je groep aan. Doe dan de <b>oefening</b>.
+      Lukt dat goed? Dan mag je de <b>toets</b> doen.</p>
+    <div id="k-traject" class="trajectkeuze" role="group" aria-label="Kies je groep"></div>
     <div id="lijst" class="lijst"></div>
     <p id="geenopen" class="uitleg" hidden>Er staat nog geen dictee open. Vraag het aan de meester.</p>
   </section>

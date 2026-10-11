@@ -61,6 +61,7 @@ input:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--pa
 /* ---------------------------------------------------------------- knoppen */
 .knop{
   appearance:none;font:inherit;font-weight:700;cursor:pointer;
+  display:inline-block;text-decoration:none;text-align:center;
   background:var(--paars);color:#fff;border:2px solid var(--paars);
   padding:11px 18px;border-radius:10px;
   transition:transform .06s ease, background .15s ease;
@@ -184,3 +185,15 @@ select{
   background:#fff;border:2px solid var(--lijn);border-radius:10px;
 }
 select:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--paars-licht)}
+
+/* ---------------------------------------------------------------- trajectkeuze */
+.trajectkeuze{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.trajectknop{
+  appearance:none;font:inherit;font-weight:700;cursor:pointer;
+  background:#fff;color:var(--paars);border:2px solid var(--lijn);
+  padding:11px 22px;border-radius:999px;
+  transition:background .15s ease;
+}
+.trajectknop:hover{background:var(--paars-licht)}
+.trajectknop[aria-pressed=true]{background:var(--paars);color:#fff;border-color:var(--paars)}
+.trajectknop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
