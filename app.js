@@ -138,9 +138,16 @@ function schooladres(mail) {
   return mail.trim().toLowerCase().endsWith("@" + CONFIG.SCHOOLDOMEIN.toLowerCase());
 }
 
-function meld(vak, tekst) {
+function meld(vak, tekst, reden) {
   const p = $("#" + vak);
   p.textContent = tekst;
+  if (tekst && reden) {
+    const kl = document.createElement("span");
+    kl.className = "zacht";
+    kl.style.display = "block";
+    kl.textContent = "technische reden: " + reden;
+    p.append(kl);
+  }
   p.hidden = !tekst;
 }
 
@@ -168,9 +175,18 @@ $("#form-aanmelden").addEventListener("submit", async (e) => {
 
   knop.disabled = false; knop.textContent = "Aanmelden";
   if (error) {
-    meld("aanmeldfout", error.message && /confirm/i.test(error.message)
-      ? "Je account is nog niet bevestigd. Kijk in je schoolmail."
-      : "Dat klopt niet. Kijk je adres en je wachtwoord nog eens na.");
+    const m = error.message || "";
+    let uitleg;
+    if (/confirm/i.test(m))
+      uitleg = "Je account is nog niet bevestigd. Kijk in je schoolmail.";
+    else if (/invalid login credentials/i.test(m))
+      uitleg = "Er is nog geen account met dat adres, of het wachtwoord klopt niet. " +
+               "Maak hieronder eerst een account.";
+    else if (/rate|too many/i.test(m))
+      uitleg = "Je probeerde te veel keer na elkaar. Wacht een minuutje.";
+    else
+      uitleg = "Aanmelden lukte niet.";
+    meld("aanmeldfout", uitleg, m);
     $("#wachtwoord").value = "";
     $("#wachtwoord").focus();
     return;
@@ -206,9 +222,10 @@ $("#form-registreren").addEventListener("submit", async (e) => {
   knop.disabled = false; knop.textContent = "Account maken";
 
   if (error) {
-    meld("registreerfout", /already/i.test(error.message)
+    const m = error.message || "";
+    meld("registreerfout", /already/i.test(m)
       ? "Met dat adres bestaat er al een account. Meld je gewoon aan."
-      : "Dat lukte niet: " + error.message);
+      : "Een account maken lukte niet.", m);
     return;
   }
 
