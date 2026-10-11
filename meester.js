@@ -10,6 +10,14 @@ const db = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
 
 let alles = null, leerlingen = [], resultaten = [];
 
+/* In dictees.json staat ook metagegeven (_bron). Dat is geen traject. */
+function trajecten() {
+  return Object.keys(alles || {}).filter((k) => !k.startsWith("_") && Array.isArray(alles[k]));
+}
+function alleDictees() {
+  return trajecten().flatMap((k) => alles[k]);
+}
+
 function veilig(t) { const d = document.createElement("div"); d.textContent = t ?? ""; return d.innerHTML; }
 function toon(id) {
   ["v-aanmelden", "v-meester"].forEach((s) => ($("#" + s).hidden = s !== id));
@@ -63,7 +71,7 @@ async function bouwOpen() {
 
   const vak = $("#open-rijen");
   vak.innerHTML = "";
-  Object.keys(alles).forEach((traject) => {
+  trajecten().forEach((traject) => {
     const aantal = alles[traject].length;
     const rij = document.createElement("div");
     rij.className = "kaart";
@@ -106,8 +114,7 @@ async function haalAlles() {
   resultaten = r.data || [];
 
   vulKiezer($("#f-leerling"), leerlingen.map((x) => [x.id, x.voornaam]), "alle leerlingen");
-  const dicteeNamen = [];
-  Object.values(alles).flat().forEach((d) => dicteeNamen.push([d.id, d.titel]));
+  const dicteeNamen = alleDictees().map((d) => [d.id, d.titel]);
   vulKiezer($("#f-dictee"), dicteeNamen, "alle dictees");
 
   teken();
@@ -125,7 +132,7 @@ function vulKiezer(sel, paren, kop) {
 }
 
 function titelVan(id) {
-  const d = Object.values(alles).flat().find((x) => x.id === id);
+  const d = alleDictees().find((x) => x.id === id);
   return d ? d.titel : id;
 }
 function naamVan(id) {
