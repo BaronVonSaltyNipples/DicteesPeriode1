@@ -1,0 +1,23 @@
+# Statische site: niets te bouwen, alles staat klaar.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# dictees.json en config.js mogen niet blijven hangen in de browsercache:
+# anders zien de leerlingen na een wijziging nog de oude versie.
+[[headers]]
+  for = "/dictees.json"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/config.js"
+  [headers.values]
+    Cache-Control = "no-cache"

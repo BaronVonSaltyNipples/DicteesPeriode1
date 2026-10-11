@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dictee 1B — meester</title>
+<link rel="stylesheet" href="stijl.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>📋</text></svg>">
+</head>
+<body>
+
+<header class="balk">
+  <div class="balk-in">
+    <span class="merk">Dictee <b>1B</b> · meester</span>
+    <span id="wie" class="wie" hidden></span>
+    <button id="afmelden" class="knop klein stil" hidden>Afmelden</button>
+  </div>
+</header>
+
+<main>
+
+  <section id="v-aanmelden" class="vak">
+    <h1>Aanmelden</h1>
+    <form id="form-aanmelden" autocomplete="off">
+      <label for="mail">E-mailadres</label>
+      <input id="mail" type="email" required autocomplete="username">
+      <label for="wachtwoord">Wachtwoord</label>
+      <input id="wachtwoord" type="password" required autocomplete="current-password">
+      <button class="knop groot" type="submit">Aanmelden</button>
+      <p id="aanmeldfout" class="fout" hidden></p>
+    </form>
+  </section>
+
+  <section id="v-meester" class="vak" hidden>
+    <h1>Wat staat er open?</h1>
+    <p class="uitleg">De leerlingen zien enkel de dictees tot en met dit nummer.</p>
+    <div id="open-rijen"></div>
+
+    <h1 style="margin-top:34px">Resultaten</h1>
+    <div class="filters">
+      <select id="f-leerling"><option value="">alle leerlingen</option></select>
+      <select id="f-dictee"><option value="">alle dictees</option></select>
+      <button id="ververs" class="knop klein stil" type="button">Verversen</button>
+      <button id="csv" class="knop klein stil" type="button">Opslaan als CSV</button>
+    </div>
+    <p id="samenvatting" class="uitleg"></p>
+    <table class="tabel">
+      <thead><tr>
+        <th>Leerling</th><th>Dictee</th><th>Soort</th><th class="nr">Score</th><th>Wanneer</th><th>Fouten</th>
+      </tr></thead>
+      <tbody id="rijen"></tbody>
+    </table>
+    <p id="leeg" class="uitleg" hidden>Nog geen resultaten.</p>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="meester.js"></script>
+</body>
+</html>

@@ -1,0 +1,2439 @@
+{
+ "_bron": "correctiesleutels dicteetoetsen, periode 1 t.e.m. 3",
+ "1B": [
+  {
+   "id": "1B-w36",
+   "week": 36,
+   "titel": "week 36 — korte, lange en andere klanken",
+   "code": "D1",
+   "zinnen": [
+    {
+     "zin": "Kijk! Daar loopt een leeuw.",
+     "woord": "leeuw",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Plots hoor ik een luide schreeuw!",
+     "woord": "schreeuw",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Een man roept!",
+     "woord": "man",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Een auto stopt voor de leeuw.",
+     "woord": "auto",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Een vrouw stapt uit de auto.",
+     "woord": "vrouw",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Ze heeft een net vast.",
+     "woord": "net",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "De leeuw duwt het net weg…",
+     "woord": "weg",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "De vrouw duwt de leeuw door de deur van de auto.",
+     "woord": "deur",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Ze rijden wel een uur.",
+     "woord": "uur",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Daar zit de leeuw opnieuw in zijn kooi.",
+     "woord": "kooi",
+     "bron": "PS3 oef. 1 p6"
+    }
+   ],
+   "nummer": 1
+  },
+  {
+   "id": "1B-w37",
+   "week": 37,
+   "titel": "week 37 — ui, eu of oe",
+   "code": "D2",
+   "zinnen": [
+    {
+     "zin": "De reus woont in een grot en is heel groot.",
+     "woord": "reus",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "De boer melkt elke ochtend zijn koeien.",
+     "woord": "boer",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Ik ruik de bloemen met mijn neus.",
+     "woord": "neus",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Bij de thee eet ik een koek.",
+     "woord": "koek",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Door het luik in het dak valt licht.",
+     "woord": "luik",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Achter het huis ligt onze tuin.",
+     "woord": "tuin",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Die muis kruipt in een klein gaatje.",
+     "woord": "muis",
+     "bron": "PS2 oef. 5 p8"
+    },
+    {
+     "zin": "De tandpasta zit in een buis.",
+     "woord": "buis",
+     "bron": "PS2 oef. 5 p8"
+    },
+    {
+     "zin": "Aan mijn hand zit een duim.",
+     "woord": "duim",
+     "bron": "PS2 oef. 6 p8"
+    },
+    {
+     "zin": "Van de meester krijg ik een pluim.",
+     "woord": "pluim",
+     "bron": "PS2 oef. 6 p8"
+    }
+   ],
+   "nummer": 2
+  },
+  {
+   "id": "1B-w38",
+   "week": 38,
+   "titel": "week 38 — herhaling week 36 en 37",
+   "code": "HERH-A",
+   "zinnen": [
+    {
+     "zin": "Kijk! Daar loopt een leeuw.",
+     "woord": "leeuw",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Een man roept!",
+     "woord": "man",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Ze heeft een net vast.",
+     "woord": "net",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "De leeuw duwt het net weg…",
+     "woord": "weg",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "De vrouw duwt de leeuw door de deur van de auto.",
+     "woord": "deur",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Ze rijden wel een uur.",
+     "woord": "uur",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Daar zit de leeuw opnieuw in zijn kooi.",
+     "woord": "kooi",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "De reus woont in een grot en is heel groot.",
+     "woord": "reus",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "De boer melkt elke ochtend zijn koeien.",
+     "woord": "boer",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Ik ruik de bloemen met mijn neus.",
+     "woord": "neus",
+     "bron": "PS2 oef. 4 p7"
+    }
+   ],
+   "nummer": 3
+  },
+  {
+   "id": "1B-w39",
+   "week": 39,
+   "titel": "week 39 — ei of ij",
+   "code": "D3",
+   "zinnen": [
+    {
+     "zin": "Het paard en de geiten staan in de wei.",
+     "woord": "wei",
+     "bron": "PS3 oef. 4 p9"
+    },
+    {
+     "zin": "Wij gaan naar de boerderij.",
+     "woord": "Wij",
+     "bron": "PS3 oef. 4 p9"
+    },
+    {
+     "zin": "In mei gaan we naar de zee.",
+     "woord": "mei",
+     "bron": "PS3 oef. 4 p10"
+    },
+    {
+     "zin": "Dat is de beste vakantie voor mij.",
+     "woord": "mij",
+     "bron": "PS3 oef. 4 p10"
+    },
+    {
+     "zin": "Zij wil graag naar het bos.",
+     "woord": "Zij",
+     "bron": "PS3 oef. 4 p10"
+    },
+    {
+     "zin": "Haar papa zei dat er nieuwe bomen staan.",
+     "woord": "zei",
+     "bron": "PS3 oef. 4 p10"
+    },
+    {
+     "zin": "Prins Tijs woont in een paleis.",
+     "woord": "paleis",
+     "bron": "PS3 oef. 5 p10"
+    },
+    {
+     "zin": "Vandaag is het feest voor het mooiste meisje van het land.",
+     "woord": "meisje",
+     "bron": "PS3 oef. 5 p10"
+    },
+    {
+     "zin": "Prinses Sam komt terug van een lange reis.",
+     "woord": "reis",
+     "bron": "PS3 oef. 5 p10"
+    },
+    {
+     "zin": "Het feest is een groot geheim.",
+     "woord": "geheim",
+     "bron": "PS3 oef. 5 p10"
+    }
+   ],
+   "nummer": 4
+  },
+  {
+   "id": "1B-w40",
+   "week": 40,
+   "titel": "week 40 — au of ou",
+   "code": "D4",
+   "zinnen": [
+    {
+     "zin": "In de maand augustus gaan we zwemmen in de zee.",
+     "woord": "augustus",
+     "bron": "PS3 oef. 6 p12"
+    },
+    {
+     "zin": "Met die kauwgom blaas ik grote bellen.",
+     "woord": "kauwgom",
+     "bron": "PS3 oef. 6 p12"
+    },
+    {
+     "zin": "Mijn wenkbrauwen zitten boven mijn ogen.",
+     "woord": "wenkbrauwen",
+     "bron": "PS3 oef. 6 p12"
+    },
+    {
+     "zin": "In de automaat zitten lekkere snoepjes.",
+     "woord": "automaat",
+     "bron": "PS3 oef. 6 p12"
+    },
+    {
+     "zin": "De pauw heeft een mooie staart.",
+     "woord": "pauw",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "Mijn mama en papa zijn mijn ouders.",
+     "woord": "ouders",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "Door de straat rijdt een auto.",
+     "woord": "auto",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "De lucht is blauw als het mooi weer is.",
+     "woord": "blauw",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "De kabouter staat bij de paddenstoel.",
+     "woord": "kabouter",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "Een arm zit vast aan de schouder.",
+     "woord": "schouder",
+     "bron": "PS3 oef. 7 p12"
+    }
+   ],
+   "nummer": 5
+  },
+  {
+   "id": "1B-w41",
+   "week": 41,
+   "titel": "week 41 — klinker op het woordeinde",
+   "code": "D5",
+   "zinnen": [
+    {
+     "zin": "Hallo, ga je mee naar de film?",
+     "woord": "ga",
+     "bron": "PS3 oef. 8 p13"
+    },
+    {
+     "zin": "Stan zegt: \"Hallo, ga je mee?\"",
+     "woord": "Hallo",
+     "bron": "PS3 oef. 8 p13"
+    },
+    {
+     "zin": "Zal ik dan twee kaartjes kopen?",
+     "woord": "twee",
+     "bron": "PS3 oef. 8 p13"
+    },
+    {
+     "zin": "Hallo, ga je mee naar de film?",
+     "woord": "mee",
+     "bron": "PS3 oef. 8 p13"
+    },
+    {
+     "zin": "In het sprookje komt een fee voor.",
+     "woord": "fee",
+     "bron": "PS3 regelkader p13"
+    },
+    {
+     "zin": "Doe het maar zo.",
+     "woord": "zo",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Kom je nu of straks?",
+     "woord": "nu",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Ik antwoord met ja of nee.",
+     "woord": "ja",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Mijn oma bakt een taart.",
+     "woord": "oma",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "We nemen een foto van de klas.",
+     "woord": "foto",
+     "bron": "oefenzin"
+    }
+   ],
+   "nummer": 6
+  },
+  {
+   "id": "1B-w42",
+   "week": 42,
+   "titel": "week 42 — aai, ooi of oei",
+   "code": "D6",
+   "zinnen": [
+    {
+     "zin": "De apen zitten in de kooien.",
+     "woord": "kooien",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "De apen hebben vlooien.",
+     "woord": "vlooien",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "We moeten het gras sproeien.",
+     "woord": "sproeien",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "Wat maken ze veel lawaai.",
+     "woord": "lawaai",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "Dan is de ooievaar aan de beurt.",
+     "woord": "ooievaar",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "Zelfs de papegaai moet proper zijn.",
+     "woord": "papegaai",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "Alle dieren en kooien zijn weer netjes en mooi.",
+     "woord": "mooi",
+     "bron": "PS4 oef. 4 p9"
+    },
+    {
+     "zin": "Ik zaai een plant.",
+     "woord": "zaai",
+     "bron": "PS2 oef. 17 p18"
+    },
+    {
+     "zin": "Het hooi is voor het paard.",
+     "woord": "hooi",
+     "bron": "PS2 oef. 17 p18"
+    },
+    {
+     "zin": "Ik roei met de boot.",
+     "woord": "roei",
+     "bron": "PS2 oef. 17 p18"
+    }
+   ],
+   "nummer": 7
+  },
+  {
+   "id": "1B-w43",
+   "week": 43,
+   "titel": "week 43 — eeuw, ieuw of uw",
+   "code": "D7",
+   "zinnen": [
+    {
+     "zin": "Ik roep. Ik gil. Ik schreeuw.",
+     "woord": "schreeuw",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "In de winter zien we witte vlokjes sneeuw uit de lucht komen.",
+     "woord": "sneeuw",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "In mijn lichaam lopen draden. Dat is een zenuw.",
+     "woord": "zenuw",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "Naast mij zie ik een vlek. Dat is mijn schaduw.",
+     "woord": "schaduw",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "Op tv kijk ik naar het nieuws.",
+     "woord": "nieuws",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "Nog een keer en nog een keer: ik doe het opnieuw.",
+     "woord": "opnieuw",
+     "bron": "PS4 oef. 5 p10"
+    },
+    {
+     "zin": "Die broek is nieuw.",
+     "woord": "nieuw",
+     "bron": "PS2 oef. 19 p21"
+    },
+    {
+     "zin": "De meeuw vliegt over de zee.",
+     "woord": "meeuw",
+     "bron": "PS2 oef. 19 p21"
+    },
+    {
+     "zin": "De leeuw brult.",
+     "woord": "leeuw",
+     "bron": "PS2 oef. 19 p21"
+    },
+    {
+     "zin": "De vis heeft een kieuw.",
+     "woord": "kieuw",
+     "bron": "PS2 oef. 19 p21"
+    }
+   ],
+   "nummer": 8
+  },
+  {
+   "id": "1B-w44",
+   "week": 44,
+   "titel": "week 44 — herhaling periode 1",
+   "code": "HERH1",
+   "zinnen": [
+    {
+     "zin": "Prinses Sam komt terug van een lange reis.",
+     "woord": "reis",
+     "bron": "PS3 oef. 5 p10"
+    },
+    {
+     "zin": "Die broek is nieuw.",
+     "woord": "nieuw",
+     "bron": "PS2 oef. 19 p21"
+    },
+    {
+     "zin": "De vrouw duwt de leeuw door de deur van de auto.",
+     "woord": "deur",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Ik ruik de bloemen met mijn neus.",
+     "woord": "neus",
+     "bron": "PS2 oef. 4 p7"
+    },
+    {
+     "zin": "Wij gaan naar de boerderij.",
+     "woord": "Wij",
+     "bron": "PS3 oef. 4 p9"
+    },
+    {
+     "zin": "Het hooi is voor het paard.",
+     "woord": "hooi",
+     "bron": "PS2 oef. 17 p18"
+    },
+    {
+     "zin": "Door de straat rijdt een auto.",
+     "woord": "auto",
+     "bron": "PS3 oef. 7 p12"
+    },
+    {
+     "zin": "Stan zegt: \"Hallo, ga je mee?\"",
+     "woord": "Hallo",
+     "bron": "PS3 oef. 8 p13"
+    },
+    {
+     "zin": "Kijk! Daar loopt een leeuw.",
+     "woord": "leeuw",
+     "bron": "PS3 oef. 1 p6"
+    },
+    {
+     "zin": "Mijn mama en papa zijn mijn ouders [PS3 oef. 7 p12] deze bladzijde is met opzet leeg.",
+     "woord": "ouders [PS3 oef. 7 p12] deze bladzijde is met opzet leeg",
+     "bron": ""
+    }
+   ],
+   "nummer": 9
+  },
+  {
+   "id": "1B-w46",
+   "week": 46,
+   "titel": "week 46 — meerdere medeklinkers vooraan en achteraan",
+   "code": "D8",
+   "zinnen": [
+    {
+     "zin": "Op de prent staan twee huizen en een boom.",
+     "woord": "prent",
+     "bron": "PS3 oef. 10 p15"
+    },
+    {
+     "zin": "De ridder trekt zijn zwaard uit de schede.",
+     "woord": "zwaard",
+     "bron": "PS3 oef. 9 p14"
+    },
+    {
+     "zin": "Op het strand vind ik een mooie schelp.",
+     "woord": "schelp",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Op zijn hand zit een lelijke wrat.",
+     "woord": "wrat",
+     "bron": "PS3 oef. 9 p14"
+    },
+    {
+     "zin": "In de soep zit een groene erwt.",
+     "woord": "erwt",
+     "bron": "PS3 oef. 9 p14"
+    },
+    {
+     "zin": "In het kasteel woont een prins.",
+     "woord": "prins",
+     "bron": "PS3 oef. 9 p14"
+    },
+    {
+     "zin": "Als je ziek bent, heb je soms koorts.",
+     "woord": "koorts",
+     "bron": "PS3 oef. 11 p16"
+    },
+    {
+     "zin": "Ik was de ramen met een spons.",
+     "woord": "spons",
+     "bron": "PS3 oef. 10 p15"
+    },
+    {
+     "zin": "Een houten schoen heet een klomp.",
+     "woord": "klomp",
+     "bron": "PS3 oef. 11 p16"
+    },
+    {
+     "zin": "In de herfst vallen de blaadjes van de bomen.",
+     "woord": "herfst",
+     "bron": "PS3 oef. 11 p16"
+    }
+   ],
+   "nummer": 10
+  },
+  {
+   "id": "1B-w47",
+   "week": 47,
+   "titel": "week 47 — sch, schr, str of spr",
+   "code": "D9",
+   "zinnen": [
+    {
+     "zin": "Ik knip het papier met een schaar.",
+     "woord": "schaar",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "Mama leest een sprookje voor.",
+     "woord": "sprookje",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Achter het huis staat een oude schuur.",
+     "woord": "schuur",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "In de kist zit een grote schat.",
+     "woord": "schat",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "Wij wonen in een rustige straat.",
+     "woord": "straat",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "Ik trek mijn schoen aan.",
+     "woord": "schoen",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "Ik ga elke dag naar school.",
+     "woord": "school",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "De kikker maakt een grote sprong.",
+     "woord": "sprong",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "De meester schrijft het woord op het bord.",
+     "woord": "schrijft",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "In mijn schrift maak ik de oefeningen.",
+     "woord": "schrift",
+     "bron": "oefenzin"
+    }
+   ],
+   "nummer": 11
+  },
+  {
+   "id": "1B-w48",
+   "week": 48,
+   "titel": "week 48 — wr of vr, -rkt of -rwt",
+   "code": "D10",
+   "zinnen": [
+    {
+     "zin": "Na donderdag komt vrijdag.",
+     "woord": "vrijdag",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "In de soep zitten groene erwten.",
+     "woord": "erwten",
+     "bron": "PS4 oef. 8 p13"
+    },
+    {
+     "zin": "Op zaterdag rijdt de vrachtwagen door de straat.",
+     "woord": "vrachtwagen",
+     "bron": "PS4 oef. 7 p13"
+    },
+    {
+     "zin": "Ik merkt dat woord met een streep.",
+     "woord": "merkt",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Varkens wroeten in de grond.",
+     "woord": "wroeten",
+     "bron": "PS4 oef. 6 p12"
+    },
+    {
+     "zin": "Op zondag gaan we naar de markt.",
+     "woord": "markt",
+     "bron": "PS4 oef. 8 p13"
+    },
+    {
+     "zin": "Mijn beste vriend heet Sam.",
+     "woord": "vriend",
+     "bron": "PS4 oef. 7 p13"
+    },
+    {
+     "zin": "Dat is een heel wreed verhaal.",
+     "woord": "wreed",
+     "bron": "PS4 oef. 6 p12"
+    },
+    {
+     "zin": "De juf is altijd vriendelijk tegen ons.",
+     "woord": "vriendelijk",
+     "bron": "PS4 oef. 7 p13"
+    },
+    {
+     "zin": "Ik ga in mijn ogen wrijven.",
+     "woord": "wrijven",
+     "bron": "PS4 oef. 6 p12"
+    }
+   ],
+   "nummer": 12
+  },
+  {
+   "id": "1B-w50",
+   "week": 50,
+   "titel": "week 50 — verkleinwoorden, ook in het meervoud",
+   "code": "D12",
+   "zinnen": [
+    {
+     "zin": "Druk eerst op het knopje.",
+     "woord": "knopje",
+     "bron": "PS3 oef. 13 p18"
+    },
+    {
+     "zin": "Het kindje is net geboren.",
+     "woord": "kindje",
+     "bron": "PS3 oef. 13 p18"
+    },
+    {
+     "zin": "In de kerstboom hangen veel balletjes.",
+     "woord": "balletjes",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Dat was een leuk grapje!",
+     "woord": "grapje",
+     "bron": "PS3 oef. 13 p18"
+    },
+    {
+     "zin": "Ik zit op een laag stoeltje.",
+     "woord": "stoeltje",
+     "bron": "PS3 regelkader p17"
+    },
+    {
+     "zin": "In de tuin staat een klein huisje.",
+     "woord": "huisje",
+     "bron": "PS3 regelkader p17"
+    },
+    {
+     "zin": "Op het vuur staat een klein pannetje.",
+     "woord": "pannetje",
+     "bron": "PS3 regelkader p17"
+    },
+    {
+     "zin": "Op dit blad staan kleine lettertjes.",
+     "woord": "lettertjes",
+     "bron": "PS3 oef. 14 p19"
+    },
+    {
+     "zin": "Aan mijn vinger draag ik een ringetje.",
+     "woord": "ringetje",
+     "bron": "PS3 regelkader p17"
+    },
+    {
+     "zin": "Aan mijn rugzak zitten twee riempjes.",
+     "woord": "riempjes",
+     "bron": "PS3 oef. 14 p19"
+    }
+   ],
+   "nummer": 13
+  },
+  {
+   "id": "1B-w51",
+   "week": 51,
+   "titel": "week 51 — herhaling periode 2",
+   "code": "HERH2",
+   "zinnen": [
+    {
+     "zin": "Papa werkt elke dag tot vijf uur.",
+     "woord": "werkt",
+     "bron": "PS4 oef. 8 p13"
+    },
+    {
+     "zin": "De kikker maakt een grote sprong.",
+     "woord": "sprong",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "In het kasteel woont een prins.",
+     "woord": "prins",
+     "bron": "PS3 oef. 9 p14"
+    },
+    {
+     "zin": "In de kom zwemmen twee visjes.",
+     "woord": "visjes",
+     "bron": "PS3 oef. 14 p19"
+    },
+    {
+     "zin": "Op zijn neus zit een wrat.",
+     "woord": "wrat",
+     "bron": "PS4 oef. 6 p12"
+    },
+    {
+     "zin": "Op zondag gaan we naar de markt.",
+     "woord": "markt",
+     "bron": "PS4 oef. 8 p13"
+    },
+    {
+     "zin": "Ik was de ramen met een spons.",
+     "woord": "spons",
+     "bron": "PS3 oef. 10 p15"
+    },
+    {
+     "zin": "Ik ga elke dag naar school.",
+     "woord": "school",
+     "bron": "PS2 oef. 7 p9"
+    },
+    {
+     "zin": "Naast het pad groeit een jong boompje.",
+     "woord": "boompje",
+     "bron": "PS3 regelkader p17"
+    },
+    {
+     "zin": "Mijn beste vriend heet Sam.",
+     "woord": "vriend",
+     "bron": "PS4 oef. 7 p13"
+    }
+   ],
+   "nummer": 14
+  },
+  {
+   "id": "1B-w01",
+   "week": 1,
+   "titel": "week 1 — samenstellingen",
+   "code": "D14",
+   "zinnen": [
+    {
+     "zin": "In de dierentuin zien we een giraf.",
+     "woord": "dierentuin",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Mijn boeken zitten in mijn boekentas.",
+     "woord": "boekentas",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Ik open de deur met de huissleutel.",
+     "woord": "huissleutel",
+     "bron": "PS3 oef. 15 p21"
+    },
+    {
+     "zin": "Op zondag eten we een pannenkoek met suiker.",
+     "woord": "pannenkoek",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Aan de appelboom hangen rode appels.",
+     "woord": "appelboom",
+     "bron": "PS3 oef. 15 p21"
+    },
+    {
+     "zin": "Ik drink een glas frisdrank met bubbels.",
+     "woord": "frisdrank",
+     "bron": "PS4 oef. 11 p18"
+    },
+    {
+     "zin": "Ik bel met de fietsbel op het stuur.",
+     "woord": "fietsbel",
+     "bron": "PS3 oef. 15 p21"
+    },
+    {
+     "zin": "Op de wafel spuit ik slagroom.",
+     "woord": "slagroom",
+     "bron": "PS4 oef. 12 p19"
+    },
+    {
+     "zin": "Voor mijn verjaardag bakt oma een fruittaart.",
+     "woord": "fruittaart",
+     "bron": "PS4 oef. 12 p19"
+    },
+    {
+     "zin": "In de winter draag ik een warme handschoen.",
+     "woord": "handschoen",
+     "bron": "PS4 oef. 11 p18"
+    }
+   ],
+   "nummer": 15
+  },
+  {
+   "id": "1B-w02",
+   "week": 2,
+   "titel": "week 2 — meervouden",
+   "code": "D15",
+   "zinnen": [
+    {
+     "zin": "Aan de haak hangen twee lepels.",
+     "woord": "lepels",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Op de kast staan twintig boeken.",
+     "woord": "boeken",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Bij regen trek ik mijn laarzen aan.",
+     "woord": "laarzen",
+     "bron": "PS4 oef. 18 p26"
+    },
+    {
+     "zin": "Bij de frieten hoort mayonaise.",
+     "woord": "frieten",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "Op het fietspad rijden veel fietsers.",
+     "woord": "fietsers",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "Het huis heeft drie deuren.",
+     "woord": "deuren",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "Op de markt koop ik verse groenten.",
+     "woord": "groenten",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "In de schaal liggen groene druiven.",
+     "woord": "druiven",
+     "bron": "PS4 oef. 18 p26"
+    },
+    {
+     "zin": "Rond de tafel staan vier stoelen.",
+     "woord": "stoelen",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "In het bos huilen de wolven.",
+     "woord": "wolven",
+     "bron": "PS4 oef. 18 p26"
+    }
+   ],
+   "nummer": 16
+  },
+  {
+   "id": "1B-w03",
+   "week": 3,
+   "titel": "week 3 — ng, nk, ngt of nkt",
+   "code": "D16",
+   "zinnen": [
+    {
+     "zin": "Ik krijg de deur niet open, de klink zit vast.",
+     "woord": "klink",
+     "bron": "PS3 oef. 18 p24"
+    },
+    {
+     "zin": "Aan het plafond hangt een lange slinger.",
+     "woord": "slinger",
+     "bron": "PS4 oef. 14 p21"
+    },
+    {
+     "zin": "De kinderen zitten flink op hun stoel.",
+     "woord": "flink",
+     "bron": "PS3 oef. 18 p24"
+    },
+    {
+     "zin": "De vogel zingt een mooi lied.",
+     "woord": "zingt",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Het schip gooit het anker uit.",
+     "woord": "anker",
+     "bron": "PS4 oef. 14 p21"
+    },
+    {
+     "zin": "In de kerststal staat een engel.",
+     "woord": "engel",
+     "bron": "PS4 oef. 14 p21"
+    },
+    {
+     "zin": "De meester is vandaag heel streng.",
+     "woord": "streng",
+     "bron": "PS3 oef. 18 p24"
+    },
+    {
+     "zin": "Draai eerst naar links.",
+     "woord": "links",
+     "bron": "PS4 oef. 14 p21"
+    },
+    {
+     "zin": "Na het spelen heb ik veel honger.",
+     "woord": "honger",
+     "bron": "PS4 oef. 14 p21"
+    },
+    {
+     "zin": "Om mijn hals hangt een gouden ketting.",
+     "woord": "ketting",
+     "bron": "PS4 oef. 14 p21"
+    }
+   ],
+   "nummer": 17
+  },
+  {
+   "id": "1B-w04",
+   "week": 4,
+   "titel": "week 4 — ch, g of gg, gt of cht",
+   "code": "D17",
+   "zinnen": [
+    {
+     "zin": "In de dierentuin loopt een tijger.",
+     "woord": "tijger",
+     "bron": "PS4 oef. 15 p23"
+    },
+    {
+     "zin": "'s Avonds zoemen de muggen.",
+     "woord": "muggen",
+     "bron": "PS4 oef. 15 p23"
+    },
+    {
+     "zin": "Na zeven komt acht.",
+     "woord": "acht",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Mijn fiets is stuk. Wat een pech!",
+     "woord": "pech",
+     "bron": "PS3 oef. 20 p26"
+    },
+    {
+     "zin": "Mijn lichaam heeft twee armen en twee benen.",
+     "woord": "lichaam",
+     "bron": "PS3 oef. 21 p27"
+    },
+    {
+     "zin": "De poes blijft graag in de zon liggen.",
+     "woord": "liggen",
+     "bron": "PS4 oef. 15 p23"
+    },
+    {
+     "zin": "Ik moet je iets zeggen.",
+     "woord": "zeggen",
+     "bron": "PS4 oef. 15 p23"
+    },
+    {
+     "zin": "Ik hoor een luide lach.",
+     "woord": "lach",
+     "bron": "PS3 oef. 20 p26"
+    },
+    {
+     "zin": "In de winter brandt de kachel.",
+     "woord": "kachel",
+     "bron": "PS3 oef. 21 p27"
+    },
+    {
+     "zin": "Mag ik je iets vragen?",
+     "woord": "vragen",
+     "bron": "PS4 oef. 15 p23"
+    }
+   ],
+   "nummer": 18
+  },
+  {
+   "id": "1B-w05",
+   "week": 5,
+   "titel": "week 5 — herhaling periode 3",
+   "code": "HERH3",
+   "zinnen": [
+    {
+     "zin": "De meester is vandaag heel streng.",
+     "woord": "streng",
+     "bron": "PS3 oef. 18 p24"
+    },
+    {
+     "zin": "Het boek ligt op de tafel.",
+     "woord": "ligt",
+     "bron": "PS3 oef. 21 p27"
+    },
+    {
+     "zin": "In de winter draag ik een warme handschoen.",
+     "woord": "handschoen",
+     "bron": "PS4 oef. 11 p18"
+    },
+    {
+     "zin": "In de straat staan veel huizen.",
+     "woord": "huizen",
+     "bron": "PS4 oef. 18 p26"
+    },
+    {
+     "zin": "Doe het licht uit als je gaat slapen.",
+     "woord": "licht",
+     "bron": "PS3 oef. 21 p27"
+    },
+    {
+     "zin": "Aan de sleutelbos hangen vijf sleutels.",
+     "woord": "sleutels",
+     "bron": "PS3 oef. 25 p31"
+    },
+    {
+     "zin": "De poes blijft graag in de zon liggen.",
+     "woord": "liggen",
+     "bron": "PS4 oef. 15 p23"
+    },
+    {
+     "zin": "In het bos huilen de wolven.",
+     "woord": "wolven",
+     "bron": "PS4 oef. 18 p26"
+    },
+    {
+     "zin": "Aan de appelboom hangen rode appels.",
+     "woord": "appelboom",
+     "bron": "PS3 oef. 15 p21"
+    },
+    {
+     "zin": "Op het meer vaart een witte zeilboot.",
+     "woord": "zeilboot",
+     "bron": "PS3 oef. 15 p21"
+    }
+   ],
+   "nummer": 19
+  }
+ ],
+ "1B-vb": [
+  {
+   "id": "1B-vb-w36",
+   "week": 36,
+   "titel": "week 36 — de j en de w en de ie",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De juf leest een boek voor.",
+     "woord": "juf",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "De poes is heel lief.",
+     "woord": "lief",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "De week begint op maandag.",
+     "woord": "week",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "De mier loopt over de grond.",
+     "woord": "mier",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "De sneeuw is wit.",
+     "woord": "wit",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "Het wiel [HA wiel] deel C – woord in de zin, zonder kader (6 p) van de fiets is stuk.",
+     "woord": "wiel [HA wiel] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De was hangt aan de lijn.",
+     "woord": "was",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "De hond is nog jong.",
+     "woord": "jong",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "In de emmer zit koud water.",
+     "woord": "water",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Wie komt er mee?",
+     "woord": "Wie",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "Op mijn brood ligt jam.",
+     "woord": "jam",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "Ik tel tot tien.",
+     "woord": "tien",
+     "bron": "HA wiel"
+    }
+   ],
+   "nummer": 1
+  },
+  {
+   "id": "1B-vb-w37",
+   "week": 37,
+   "titel": "week 37 — de eu en de ou",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Papa zaagt een stuk hout.",
+     "woord": "hout",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "Ik ruik met mijn neus.",
+     "woord": "neus",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "Dat spel is heel leuk.",
+     "woord": "leuk",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "Dat antwoord is fout.",
+     "woord": "fout",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "Doe de deur eens dicht.",
+     "woord": "deur",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "De ring is van goud [HA hout] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "goud [HA hout] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De bout van de fiets is los.",
+     "woord": "bout",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Op de soep doe ik wat zout.",
+     "woord": "zout",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "In de keuken bakt papa een taart.",
+     "woord": "keuken",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "In de winter is het koud.",
+     "woord": "koud",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "Wees toch niet zo stout!",
+     "woord": "stout",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Opa is al heel oud.",
+     "woord": "oud",
+     "bron": "HA hout"
+    }
+   ],
+   "nummer": 2
+  },
+  {
+   "id": "1B-vb-w38",
+   "week": 38,
+   "titel": "week 38 — herhaling: de j, de w, de ie, de eu en de ou",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De ring is van goud.",
+     "woord": "goud",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "De hond is nog jong.",
+     "woord": "jong",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "Doe de deur eens dicht.",
+     "woord": "deur",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "De reus is heel groot.",
+     "woord": "reus",
+     "bron": "HA reus"
+    },
+    {
+     "zin": "De poes is heel lief.",
+     "woord": "lief",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "Papa zaagt een stuk hout [HA hout] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "hout [HA hout] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "In de winter is het koud.",
+     "woord": "koud",
+     "bron": "HA hout"
+    },
+    {
+     "zin": "De juf leest een boek voor.",
+     "woord": "juf",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "Ik tel tot tien.",
+     "woord": "tien",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "Wie komt er mee?",
+     "woord": "Wie",
+     "bron": "HA wiel"
+    },
+    {
+     "zin": "Ik trek mijn jas aan.",
+     "woord": "jas",
+     "bron": "HA jas"
+    },
+    {
+     "zin": "Het wiel van de fiets is stuk.",
+     "woord": "wiel",
+     "bron": "HA wiel"
+    }
+   ],
+   "nummer": 3
+  },
+  {
+   "id": "1B-vb-w39",
+   "week": 39,
+   "titel": "week 39 — de sch en de doffe e",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "In de boom zit een vogel.",
+     "woord": "vogel",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "Wij eten een boterham.",
+     "woord": "eten",
+     "bron": "HA de doffe e"
+    },
+    {
+     "zin": "Ik eet een rode appel.",
+     "woord": "appel",
+     "bron": "oefenzin"
+    },
+    {
+     "zin": "In de kist zit een grote schat.",
+     "woord": "schat",
+     "bron": "HA schuur"
+    },
+    {
+     "zin": "Het raam staat open.",
+     "woord": "open",
+     "bron": "HA de doffe e"
+    },
+    {
+     "zin": "Ik knip het papier met een schaar [HA schuur] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "schaar [HA schuur] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Het schaap eet gras in de wei.",
+     "woord": "schaap",
+     "bron": "HA schuur"
+    },
+    {
+     "zin": "De kinderen lopen naar de klas.",
+     "woord": "lopen",
+     "bron": "HA de doffe e"
+    },
+    {
+     "zin": "Ik trek mijn schoen aan.",
+     "woord": "schoen",
+     "bron": "HA schuur"
+    },
+    {
+     "zin": "De fietsen staan in de schuur.",
+     "woord": "schuur",
+     "bron": "HA schuur"
+    },
+    {
+     "zin": "Ik roer in de soep met een lepel.",
+     "woord": "lepel",
+     "bron": "HA de doffe e"
+    },
+    {
+     "zin": "Op de tafel staat een bord.",
+     "woord": "tafel",
+     "bron": "HA de doffe e"
+    }
+   ],
+   "nummer": 4
+  },
+  {
+   "id": "1B-vb-w40",
+   "week": 40,
+   "titel": "week 40 — de ei en de ch",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Het schip vaart met een zeil.",
+     "woord": "zeil",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "Doe de deur dicht.",
+     "woord": "dicht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "In de kamer brandt het licht.",
+     "woord": "licht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "De geit eet gras in de wei.",
+     "woord": "geit",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "Het kussen is heel zacht.",
+     "woord": "zacht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "De trein [HA de ei] deel C – woord in de zin, zonder kader (6 p) rijdt naar de zee.",
+     "woord": "trein [HA de ei] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "We spelen op het plein.",
+     "woord": "plein",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "Ik eet een ei bij het ontbijt.",
+     "woord": "ei",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "De poes is nog klein.",
+     "woord": "klein",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "Ik hoor een luide lach.",
+     "woord": "lach",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "Na zeven komt acht.",
+     "woord": "acht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "Het is donker in de nacht.",
+     "woord": "nacht",
+     "bron": "HA de ch"
+    }
+   ],
+   "nummer": 5
+  },
+  {
+   "id": "1B-vb-w41",
+   "week": 41,
+   "titel": "week 41 — de au en de auw",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Die wortel is nog rauw.",
+     "woord": "rauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Door de straat rijdt een auto.",
+     "woord": "auto",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Die straat is heel nauw.",
+     "woord": "nauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "De pauw heeft een mooie staart.",
+     "woord": "pauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Kom maar gauw naar hier!",
+     "woord": "gauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Op de frieten doe ik saus [HA de au en de auw] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "saus [HA de au en de auw] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De lucht is blauw.",
+     "woord": "blauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Na zeven komt acht.",
+     "woord": "acht",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "Ik eet een ei bij het ontbijt.",
+     "woord": "ei",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "De poes is nog klein.",
+     "woord": "klein",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "Het is donker in de nacht.",
+     "woord": "nacht",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "Ik hoor een luide lach.",
+     "woord": "lach",
+     "bron": "HA herhaling"
+    }
+   ],
+   "nummer": 6
+  },
+  {
+   "id": "1B-vb-w42",
+   "week": 42,
+   "titel": "week 42 — de ng en de nk",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De koning woont in een paleis.",
+     "woord": "koning",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "De slang kruipt door het gras.",
+     "woord": "slang",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "Papa klopt een spijker in de plank.",
+     "woord": "plank",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "Op de plank staan boeken.",
+     "woord": "plank",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "Ik haal diep adem met mijn long.",
+     "woord": "long",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "Ik denk [HA de nk] deel C – woord in de zin, zonder kader (6 p) nog even na over de som.",
+     "woord": "denk [HA de nk] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Aan mijn vinger zit een ring.",
+     "woord": "ring",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "Ik zit op de bank.",
+     "woord": "bank",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "Ik drink een glas water.",
+     "woord": "drink",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "Ik dank je voor het mooie boek.",
+     "woord": "dank",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "Op de speelplaats staat een lange bank.",
+     "woord": "bank",
+     "bron": "HA de nk"
+    },
+    {
+     "zin": "De lucht is blauw.",
+     "woord": "blauw",
+     "bron": "HA herhaling"
+    }
+   ],
+   "nummer": 7
+  },
+  {
+   "id": "1B-vb-w43",
+   "week": 43,
+   "titel": "week 43 — herhaling: ei, ch, au/auw, ng en nk",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Door de straat rijdt een auto.",
+     "woord": "auto",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Het is donker in de nacht.",
+     "woord": "nacht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "De koning woont in een paleis.",
+     "woord": "koning",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "Na zeven komt acht.",
+     "woord": "acht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "De slang kruipt door het gras.",
+     "woord": "slang",
+     "bron": "HA de ng"
+    },
+    {
+     "zin": "Kom maar gauw [HA de au en de auw] deel C – woord in de zin, zonder kader (6 p) naar hier!",
+     "woord": "gauw [HA de au en de auw] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De lucht is blauw.",
+     "woord": "blauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "Het kussen is heel zacht.",
+     "woord": "zacht",
+     "bron": "HA de ch"
+    },
+    {
+     "zin": "De trein rijdt naar de zee.",
+     "woord": "trein",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "We spelen op het plein.",
+     "woord": "plein",
+     "bron": "HA de ei"
+    },
+    {
+     "zin": "De pauw heeft een mooie staart.",
+     "woord": "pauw",
+     "bron": "HA de au en de auw"
+    },
+    {
+     "zin": "De poes is nog klein.",
+     "woord": "klein",
+     "bron": "HA de ei"
+    }
+   ],
+   "nummer": 8
+  },
+  {
+   "id": "1B-vb-w44",
+   "week": 44,
+   "titel": "week 44 — herhaling periode 1",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Wie komt er mee?",
+     "woord": "Wie",
+     "bron": "HA de w en de ie"
+    },
+    {
+     "zin": "Ik ruik met mijn neus.",
+     "woord": "neus",
+     "bron": "HA de eu"
+    },
+    {
+     "zin": "Op mijn brood ligt jam.",
+     "woord": "jam",
+     "bron": "HA de j"
+    },
+    {
+     "zin": "In de winter is het koud.",
+     "woord": "koud",
+     "bron": "HA de ou"
+    },
+    {
+     "zin": "Dat spel is heel leuk.",
+     "woord": "leuk",
+     "bron": "HA de eu"
+    },
+    {
+     "zin": "De juf [HA de j] deel C – woord in de zin, zonder kader (6 p) leest een boek voor.",
+     "woord": "juf [HA de j] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Doe de deur eens dicht.",
+     "woord": "deur",
+     "bron": "HA de eu"
+    },
+    {
+     "zin": "De sneeuw is wit.",
+     "woord": "wit",
+     "bron": "HA de w en de ie"
+    },
+    {
+     "zin": "De was hangt aan de lijn.",
+     "woord": "was",
+     "bron": "HA de w en de ie"
+    },
+    {
+     "zin": "De hond is nog jong.",
+     "woord": "jong",
+     "bron": "HA de j"
+    },
+    {
+     "zin": "Het wiel van de fiets is stuk.",
+     "woord": "wiel",
+     "bron": "HA de w en de ie"
+    },
+    {
+     "zin": "Papa zaagt een stuk hout.",
+     "woord": "hout",
+     "bron": "HA de ou"
+    }
+   ],
+   "nummer": 9
+  },
+  {
+   "id": "1B-vb-w46",
+   "week": 46,
+   "titel": "week 46 — de ieuw en de eeuw",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Een vis heeft twee kieuwen.",
+     "woord": "kieuwen",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "Ik ben moe en ik geeuw.",
+     "woord": "geeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "Ik draag mijn nieuwe jas.",
+     "woord": "nieuwe",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "Ik hoor een luide schreeuw.",
+     "woord": "schreeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "De leeuw brult heel hard.",
+     "woord": "leeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "Mijn fiets is nog nieuw [HA de ieuw] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "nieuw [HA de ieuw] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De meeuw vliegt boven de zee.",
+     "woord": "meeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "In de winter valt er sneeuw.",
+     "woord": "sneeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "Honderd jaar is een eeuw.",
+     "woord": "eeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "De vis ademt met zijn kieuw.",
+     "woord": "kieuw",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "Op tv kijk ik naar het nieuws.",
+     "woord": "nieuws",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "Het lukt niet. Ik doe het opnieuw.",
+     "woord": "opnieuw",
+     "bron": "HA de ieuw"
+    }
+   ],
+   "nummer": 10
+  },
+  {
+   "id": "1B-vb-w47",
+   "week": 47,
+   "titel": "week 47 — de aai en de ooi",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "In mijn broek zit een plooi.",
+     "woord": "plooi",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "Ik gooi de bal naar jou.",
+     "woord": "gooi",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "Die film vind ik heel saai.",
+     "woord": "saai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "Ik zwaai naar mijn oma.",
+     "woord": "zwaai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "De bloem is heel mooi.",
+     "woord": "mooi",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "Dat vlees is heel taai [HA de aai] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "taai [HA de aai] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De haai zwemt in de zee.",
+     "woord": "haai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "De koe eet hooi.",
+     "woord": "hooi",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "De weg maakt een scherpe draai.",
+     "woord": "draai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "Ik kom nooit te laat.",
+     "woord": "nooit",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "De kraai zit op het dak.",
+     "woord": "kraai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "De vogel zit in zijn kooi.",
+     "woord": "kooi",
+     "bron": "HA de ooi"
+    }
+   ],
+   "nummer": 11
+  },
+  {
+   "id": "1B-vb-w48",
+   "week": 48,
+   "titel": "week 48 — de oei, met herhaling van de ooi",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De koe loeit in de wei.",
+     "woord": "loeit",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "De bloem staat in bloei.",
+     "woord": "bloei",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "Ik roei met de boot.",
+     "woord": "roei",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "Papa gaat de haag snoei.",
+     "woord": "snoei",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "In het water drijft een boei.",
+     "woord": "boei",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "Foei [HA de oei] deel C – woord in de zin, zonder kader (6 p), dat is niet lief van je!",
+     "woord": "Foei [HA de oei] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Ik groei elk jaar een beetje.",
+     "woord": "groei",
+     "bron": "HA de oei"
+    },
+    {
+     "zin": "De haai zwemt in de zee.",
+     "woord": "haai",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "De weg maakt een scherpe draai.",
+     "woord": "draai",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "De vogel zit in zijn kooi.",
+     "woord": "kooi",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "Dat vlees is heel taai.",
+     "woord": "taai",
+     "bron": "HA herhaling"
+    },
+    {
+     "zin": "De koe eet hooi.",
+     "woord": "hooi",
+     "bron": "HA herhaling"
+    }
+   ],
+   "nummer": 12
+  },
+  {
+   "id": "1B-vb-w50",
+   "week": 50,
+   "titel": "week 50 — de eindklanken -st, -rk, -ks, -rm en -rs, -lk",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De man kijkt nors en zegt niets.",
+     "woord": "nors",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "Aan de lucht drijft een witte wolk.",
+     "woord": "wolk",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "Het speelgoed zit in een grote kist.",
+     "woord": "kist",
+     "bron": "HA -st, -rk, -ks, -rm"
+    },
+    {
+     "zin": "Ik drink een glas melk.",
+     "woord": "melk",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "Papa harkt de bladeren met de hark.",
+     "woord": "hark",
+     "bron": "HA -st, -rk, -ks, -rm"
+    },
+    {
+     "zin": "Het hele volk [HA -rs, -lk] deel C – woord in de zin, zonder kader (6 p) kijkt naar de stoet.",
+     "woord": "volk [HA -rs, -lk] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "In de ochtend hangt er mist.",
+     "woord": "mist",
+     "bron": "HA -st, -rk, -ks, -rm"
+    },
+    {
+     "zin": "De boot vaart de juiste koers.",
+     "woord": "koers",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "We spelen in het park.",
+     "woord": "park",
+     "bron": "HA -st, -rk, -ks, -rm"
+    },
+    {
+     "zin": "Ik eet een rode kers.",
+     "woord": "kers",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "Op de schors van de boom groeit mos.",
+     "woord": "schors",
+     "bron": "HA -rs, -lk"
+    },
+    {
+     "zin": "Ik eet met een mes en een vork.",
+     "woord": "vork",
+     "bron": "HA -st, -rk, -ks, -rm"
+    }
+   ],
+   "nummer": 13
+  },
+  {
+   "id": "1B-vb-w51",
+   "week": 51,
+   "titel": "week 51 — herhaling periode 2",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "De meeuw vliegt boven de zee.",
+     "woord": "meeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "De bloem is heel mooi.",
+     "woord": "mooi",
+     "bron": "HA de ooi"
+    },
+    {
+     "zin": "De weg maakt een scherpe draai.",
+     "woord": "draai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "Op tv kijk ik naar het nieuws.",
+     "woord": "nieuws",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "In de winter valt er sneeuw.",
+     "woord": "sneeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "Dat vlees is heel taai [HA de aai] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "taai [HA de aai] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Het lukt niet. Ik doe het opnieuw.",
+     "woord": "opnieuw",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "Honderd jaar is een eeuw.",
+     "woord": "eeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "De kraai zit op het dak.",
+     "woord": "kraai",
+     "bron": "HA de aai"
+    },
+    {
+     "zin": "Mijn fiets is nog nieuw.",
+     "woord": "nieuw",
+     "bron": "HA de ieuw"
+    },
+    {
+     "zin": "De leeuw brult heel hard.",
+     "woord": "leeuw",
+     "bron": "HA de eeuw"
+    },
+    {
+     "zin": "De vis ademt met zijn kieuw.",
+     "woord": "kieuw",
+     "bron": "HA de ieuw"
+    }
+   ],
+   "nummer": 14
+  },
+  {
+   "id": "1B-vb-w01",
+   "week": 1,
+   "titel": "week 1 — de eindklanken -ts, -mp, -ls, -lg en -rg, -nt",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Papa pompt de band op met de pomp.",
+     "woord": "pomp",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "Het potlood heeft een scherpe punt.",
+     "woord": "punt",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "Ik geef je een kleine hint.",
+     "woord": "hint",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "Mijn horloge zit rond mijn pols.",
+     "woord": "pols",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "De poes heeft een bont vachtje.",
+     "woord": "bont",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "Op tafel staat een lamp [HA -ts, -mp, -ls, -lg] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "lamp [HA -ts, -mp, -ls, -lg] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "We slapen in een tent op het kamp.",
+     "woord": "tent",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "In de zomer slapen we in een kamp.",
+     "woord": "kamp",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "We klimmen op de hoge berg.",
+     "woord": "berg",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "Maak je geen zorg, het komt goed.",
+     "woord": "zorg",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "De prinses rijdt in een gouden koets.",
+     "woord": "koets",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "Ik rijd met de fiets naar school.",
+     "woord": "fiets",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    }
+   ],
+   "nummer": 15
+  },
+  {
+   "id": "1B-vb-w02",
+   "week": 2,
+   "titel": "week 2 — fl-, st-, pr-, kl- en dr-, gl-, pl-, kw-",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "In de soep zit prei.",
+     "woord": "prei",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "In de vijver zwemt een kwal.",
+     "woord": "kwal",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Ik drink uit een glas.",
+     "woord": "glas",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "De muis is heel klein.",
+     "woord": "klein",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "De pannenkoek is plat.",
+     "woord": "plat",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Ik hoor een luide klap [HA fl-, st-, pr- of kl-] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "klap [HA fl-, st-, pr- of kl-] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De juf zet een stip op het bord.",
+     "woord": "stip",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "Ik geef een klap in mijn handen.",
+     "woord": "klap",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "De weg is recht en plat.",
+     "woord": "plat",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Het is heel druk op straat.",
+     "woord": "druk",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Op het blad staat een kleine stip.",
+     "woord": "stip",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "Ik verf met een kwast.",
+     "woord": "kwast",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    }
+   ],
+   "nummer": 16
+  },
+  {
+   "id": "1B-vb-w03",
+   "week": 3,
+   "titel": "week 3 — vl-, vr-, sl-, kr- en bl-, gr-, zw-, tr-",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Mijn beste vriend heet Sam.",
+     "woord": "vriend",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "De lucht is helder blauw.",
+     "woord": "blauw",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "De trein rijdt naar de zee.",
+     "woord": "trein",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "Op mijn bord ligt sla.",
+     "woord": "sla",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "Ik loop de trap op.",
+     "woord": "trap",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "De lucht is blauw [HA bl-, gr-, zw- of tr-] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "blauw [HA bl-, gr-, zw- of tr-] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "De slak kruipt heel traag.",
+     "woord": "slak",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "Het gras is groen.",
+     "woord": "groen",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "De nacht is zwart.",
+     "woord": "zwart",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "Op de toren wappert een vlag.",
+     "woord": "vlag",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "Op de deur hangt een krans van hulst.",
+     "woord": "krans",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "In de haven ligt een vloot schepen.",
+     "woord": "vloot",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    }
+   ],
+   "nummer": 17
+  },
+  {
+   "id": "1B-vb-w04",
+   "week": 4,
+   "titel": "week 4 — herhaling van de medeklinkers vooraan",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "In de zee zwemt een kwal.",
+     "woord": "kwal",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "De pannenkoek is plat.",
+     "woord": "plat",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "De lucht is blauw.",
+     "woord": "blauw",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "Mijn beste vriend heet Sam.",
+     "woord": "vriend",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "Ik verf met een kwast.",
+     "woord": "kwast",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Op de deur hangt een krans [HA vl-, vr-, sl- of kr-] deel C – woord in de zin, zonder kader (6 p) van hulst.",
+     "woord": "krans [HA vl-, vr-, sl- of kr-] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Ik drink uit een glas.",
+     "woord": "glas",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Het gras is groen.",
+     "woord": "groen",
+     "bron": "HA bl-, gr-, zw- of tr-"
+    },
+    {
+     "zin": "Ik geef een klap in mijn handen.",
+     "woord": "klap",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "In de haven ligt een vloot schepen.",
+     "woord": "vloot",
+     "bron": "HA vl-, vr-, sl- of kr-"
+    },
+    {
+     "zin": "Op het blad staat een kleine stip.",
+     "woord": "stip",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "De muis is heel klein.",
+     "woord": "klein",
+     "bron": "HA fl-, st-, pr- of kl-"
+    }
+   ],
+   "nummer": 18
+  },
+  {
+   "id": "1B-vb-w05",
+   "week": 5,
+   "titel": "week 5 — herhaling periode 3",
+   "code": null,
+   "zinnen": [
+    {
+     "zin": "Mag ik een proef van de taart?",
+     "woord": "proef",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "Op tafel staat een lamp.",
+     "woord": "lamp",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "Dat is erg jammer.",
+     "woord": "erg",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "De muis is heel klein.",
+     "woord": "klein",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "Maak je geen zorg, het komt goed.",
+     "woord": "zorg",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "De pannenkoek is plat [HA dr-, gl-, pl- of kw-] deel C – woord in de zin, zonder kader (6 p).",
+     "woord": "plat [HA dr-, gl-, pl- of kw-] deel C – woord in de zin, zonder kader (6 p)",
+     "bron": ""
+    },
+    {
+     "zin": "Op het blad staat een kleine stip.",
+     "woord": "stip",
+     "bron": "HA fl-, st-, pr- of kl-"
+    },
+    {
+     "zin": "We slapen in een tent op het kamp.",
+     "woord": "tent",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "We klimmen op de hoge berg.",
+     "woord": "berg",
+     "bron": "HA -rg, -nt"
+    },
+    {
+     "zin": "Op mijn hoofd zet ik een muts.",
+     "woord": "muts",
+     "bron": "HA -ts, -mp, -ls, -lg"
+    },
+    {
+     "zin": "Het is heel druk op straat.",
+     "woord": "druk",
+     "bron": "HA dr-, gl-, pl- of kw-"
+    },
+    {
+     "zin": "Ik geef een klap in mijn handen.",
+     "woord": "klap",
+     "bron": "HA fl-, st-, pr- of kl-"
+    }
+   ],
+   "nummer": 19
+  }
+ ]
+}

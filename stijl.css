@@ -1,0 +1,173 @@
+/* Dictee 1B - opmaak in de huisstijl van de bundels (spelling = paars) */
+:root{
+  --navy:#1E2A44;
+  --paars:#7A3E9D;
+  --paars-licht:#EFE5F5;
+  --groen:#2E8B57;
+  --groen-licht:#E3F1E9;
+  --rood:#C8102E;
+  --rood-licht:#FBE3E2;
+  --grijs:#7A7F8C;
+  --lijn:#E4E7EE;
+  --vel:#ffffff;
+  --blad:#F7F5FA;
+  --schaduw:0 1px 2px rgba(30,42,68,.06), 0 8px 24px rgba(30,42,68,.07);
+  --rond:14px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--blad);
+  color:var(--navy);
+  font-family:Carlito,Calibri,"Segoe UI",system-ui,-apple-system,sans-serif;
+  font-size:19px;
+  line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+
+/* ---------------------------------------------------------------- balk */
+.balk{background:var(--paars);color:#fff}
+.balk-in{
+  max-width:720px;margin:0 auto;padding:12px 16px;
+  display:flex;align-items:center;gap:12px;
+}
+.merk{font-size:17px;letter-spacing:.02em}
+.merk b{font-weight:700}
+.wie{margin-left:auto;font-size:16px;opacity:.92}
+.balk .knop.stil{background:rgba(255,255,255,.16);color:#fff;border-color:transparent}
+.balk .knop.stil:hover{background:rgba(255,255,255,.26)}
+
+/* ---------------------------------------------------------------- vak */
+main{max-width:720px;margin:0 auto;padding:24px 16px 56px}
+.vak{
+  background:var(--vel);border-radius:var(--rond);box-shadow:var(--schaduw);
+  padding:26px 22px;
+}
+h1{font-size:27px;margin:0 0 6px;line-height:1.2}
+h2{font-size:19px;margin:22px 0 8px}
+.uitleg{color:var(--grijs);margin:0 0 18px}
+.kop-rij{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.kop-rij h1{margin:0}
+
+/* ---------------------------------------------------------------- formulier */
+label{display:block;font-weight:700;margin:16px 0 6px;font-size:17px}
+input[type=text],input[type=password]{
+  width:100%;padding:13px 14px;font:inherit;color:inherit;
+  background:#fff;border:2px solid var(--lijn);border-radius:10px;
+}
+input:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--paars-licht)}
+
+/* ---------------------------------------------------------------- knoppen */
+.knop{
+  appearance:none;font:inherit;font-weight:700;cursor:pointer;
+  background:var(--paars);color:#fff;border:2px solid var(--paars);
+  padding:11px 18px;border-radius:10px;
+  transition:transform .06s ease, background .15s ease;
+}
+.knop:hover{background:#6a3489}
+.knop:active{transform:translateY(1px)}
+.knop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.knop.groot{width:100%;padding:15px 18px;font-size:20px;margin-top:18px}
+.knop.klein{padding:7px 12px;font-size:15px}
+.knop.stil{background:#fff;color:var(--paars);border-color:var(--lijn)}
+.knop.stil:hover{background:var(--paars-licht)}
+.knop[disabled]{opacity:.45;cursor:default;transform:none}
+.knoppen{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.knoppen .knop.groot{width:auto;flex:1 1 220px;margin-top:0}
+.terug{margin-top:26px}
+
+/* ---------------------------------------------------------------- lijst */
+.lijst{display:grid;gap:12px}
+.kaart{
+  border:2px solid var(--lijn);border-radius:12px;padding:14px 16px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.kaart .naam{font-weight:700;flex:1 1 180px}
+.kaart .sub{color:var(--grijs);font-size:15px;width:100%;margin-top:-4px}
+.kaart.af{border-color:var(--groen);background:var(--groen-licht)}
+
+.speld{
+  font-size:14px;font-weight:700;border-radius:999px;padding:4px 11px;
+  background:var(--paars-licht);color:var(--paars);white-space:nowrap;
+}
+.speld.toets{background:var(--rood-licht);color:var(--rood)}
+.speld.klaar{background:var(--groen-licht);color:var(--groen)}
+
+/* ---------------------------------------------------------------- dictee */
+.voortgang{height:9px;background:var(--lijn);border-radius:999px;overflow:hidden}
+.voortgang-in{height:100%;width:0;background:var(--paars);transition:width .25s ease}
+.teller{color:var(--grijs);font-size:15px;margin:8px 0 18px}
+
+.zin{
+  font-size:24px;line-height:1.45;margin:0 0 20px;
+  background:var(--paars-licht);border-radius:12px;padding:18px 20px;
+}
+.zin .gat{
+  display:inline-block;min-width:110px;border-bottom:3px solid var(--paars);
+  vertical-align:baseline;margin:0 3px;
+}
+
+.luister{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.luidspreker{
+  width:20px;height:20px;flex:none;
+  background:currentColor;
+  -webkit-mask:var(--sp) center/contain no-repeat; mask:var(--sp) center/contain no-repeat;
+  --sp:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a6.8 6.8 0 0 1 0 13.4v2.1a8.9 8.9 0 0 0 0-17.6z'/%3E%3C/svg%3E");
+}
+.knop.luister[data-praat="1"] .luidspreker{animation:puls .9s ease-in-out infinite}
+@keyframes puls{0%,100%{opacity:1}50%{opacity:.35}}
+
+.invul{
+  font-size:28px;font-weight:700;text-align:center;letter-spacing:.01em;
+  padding:16px 14px;margin-top:18px;
+}
+#form-woord{margin:0}
+
+.oordeel{
+  margin:18px 0 0;padding:14px 16px;border-radius:12px;font-size:19px;font-weight:700;
+}
+.oordeel.goed{background:var(--groen-licht);color:var(--groen)}
+.oordeel.mis{background:var(--rood-licht);color:var(--rood)}
+.oordeel .juist{display:block;font-weight:400;color:var(--navy);margin-top:4px;font-size:17px}
+.oordeel .juist b{color:var(--rood)}
+
+/* ---------------------------------------------------------------- einde */
+.score{font-size:42px;font-weight:700;margin:6px 0 2px}
+.score small{font-size:22px;color:var(--grijs);font-weight:400}
+.fouten{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.fouten li{
+  border:2px solid var(--lijn);border-radius:10px;padding:10px 14px;
+  display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;
+}
+.fouten .jij{color:var(--rood);text-decoration:line-through}
+.fouten .moet{font-weight:700;color:var(--groen)}
+
+.fout{color:var(--rood);font-weight:700;margin:14px 0 0}
+.waarschuwing{
+  margin:18px 0 0;padding:12px 16px;border-radius:10px;
+  background:#FFF6E0;color:#7A5200;font-size:16px;
+}
+
+/* ---------------------------------------------------------------- meester */
+.tabel{width:100%;border-collapse:collapse;margin-top:10px;font-size:17px}
+.tabel th,.tabel td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--lijn)}
+.tabel th{font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}
+.tabel tr:hover td{background:var(--blad)}
+.tabel .nr{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rij-toets{font-weight:700}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.filters select{padding:9px 12px;font:inherit;border:2px solid var(--lijn);border-radius:10px;background:#fff}
+
+@media (max-width:520px){
+  body{font-size:18px}
+  main{padding:16px 12px 40px}
+  .vak{padding:20px 16px}
+  h1{font-size:23px}
+  .zin{font-size:21px}
+  .invul{font-size:24px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}

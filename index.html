@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dictee 1B</title>
+<link rel="stylesheet" href="stijl.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>✏️</text></svg>">
+</head>
+<body>
+
+<header class="balk">
+  <div class="balk-in">
+    <span class="merk">Dictee <b>1B</b></span>
+    <span id="wie" class="wie" hidden></span>
+    <button id="afmelden" class="knop klein stil" hidden>Afmelden</button>
+  </div>
+</header>
+
+<main id="hoofd">
+
+  <!-- ============================================ aanmelden -->
+  <section id="v-aanmelden" class="vak">
+    <h1>Hallo! Wie ben jij?</h1>
+    <form id="form-aanmelden" autocomplete="off">
+      <label for="voornaam">Jouw voornaam</label>
+      <input id="voornaam" name="voornaam" type="text" required autocapitalize="words"
+             autocomplete="off" placeholder="typ je voornaam">
+
+      <label for="wachtwoord">Jouw geheime woord</label>
+      <input id="wachtwoord" name="wachtwoord" type="password" required
+             autocomplete="off" placeholder="staat op je kaartje">
+
+      <button class="knop groot" type="submit">Aanmelden</button>
+      <p id="aanmeldfout" class="fout" hidden></p>
+    </form>
+  </section>
+
+  <!-- ============================================ keuze -->
+  <section id="v-keuze" class="vak" hidden>
+    <h1>Welk dictee doe je?</h1>
+    <p class="uitleg">Doe eerst de <b>oefening</b>. Lukt dat goed? Dan mag je de <b>toets</b> doen.</p>
+    <div id="lijst" class="lijst"></div>
+    <p id="geenopen" class="uitleg" hidden>Er staat nog geen dictee open. Vraag het aan de meester.</p>
+  </section>
+
+  <!-- ============================================ dictee -->
+  <section id="v-dictee" class="vak" hidden>
+    <div class="kop-rij">
+      <h1 id="d-titel">Dictee</h1>
+      <span id="d-soort" class="speld"></span>
+    </div>
+
+    <div class="voortgang"><div id="d-balk" class="voortgang-in"></div></div>
+    <p id="d-teller" class="teller"></p>
+
+    <p id="d-zin" class="zin"></p>
+
+    <div class="knoppen">
+      <button id="d-luister" class="knop groot luister" type="button">
+        <span class="luidspreker" aria-hidden="true"></span> Luister
+      </button>
+      <button id="d-nogeens" class="knop stil" type="button">Nog eens het woord</button>
+    </div>
+
+    <form id="form-woord" autocomplete="off">
+      <input id="d-invul" class="invul" type="text" required
+             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+             placeholder="schrijf het woord">
+      <button id="d-verder" class="knop groot" type="submit">Nakijken</button>
+    </form>
+
+    <p id="d-oordeel" class="oordeel" hidden></p>
+    <button id="d-stop" class="knop klein stil terug" type="button">Stoppen</button>
+  </section>
+
+  <!-- ============================================ einde -->
+  <section id="v-einde" class="vak" hidden>
+    <h1 id="e-titel">Klaar!</h1>
+    <p id="e-score" class="score"></p>
+    <p id="e-boodschap" class="uitleg"></p>
+    <h2 id="e-kop-fouten" hidden>Dit mag je nog oefenen</h2>
+    <ul id="e-fouten" class="fouten"></ul>
+    <div class="knoppen">
+      <button id="e-opnieuw" class="knop" type="button">Nog eens oefenen</button>
+      <button id="e-terug" class="knop groot" type="button">Terug naar de lijst</button>
+    </div>
+  </section>
+
+  <p id="praat-waarschuwing" class="waarschuwing" hidden>
+    Deze computer heeft geen Nederlandse stem. Vraag het aan de meester.
+  </p>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
