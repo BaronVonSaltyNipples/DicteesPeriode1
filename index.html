@@ -22,18 +22,63 @@
   <!-- ============================================ aanmelden -->
   <section id="v-aanmelden" class="vak">
     <h1>Hallo! Wie ben jij?</h1>
-    <form id="form-aanmelden" autocomplete="off">
-      <label for="voornaam">Jouw voornaam</label>
-      <input id="voornaam" name="voornaam" type="text" required autocapitalize="words"
-             autocomplete="off" placeholder="typ je voornaam">
+    <form id="form-aanmelden" autocomplete="on">
+      <label for="mail">Jouw schoolmail</label>
+      <input id="mail" type="email" required autocomplete="username"
+             autocapitalize="off" spellcheck="false" placeholder="voornaam.naam@kleurenpalet.be">
 
-      <label for="wachtwoord">Jouw geheime woord</label>
-      <input id="wachtwoord" name="wachtwoord" type="password" required
-             autocomplete="off" placeholder="staat op je kaartje">
+      <label for="wachtwoord">Jouw wachtwoord</label>
+      <input id="wachtwoord" type="password" required autocomplete="current-password"
+             placeholder="het wachtwoord dat je koos">
 
       <button class="knop groot" type="submit">Aanmelden</button>
       <p id="aanmeldfout" class="fout" hidden></p>
     </form>
+    <p class="uitleg" style="margin-top:20px">
+      Nog geen account? <button id="naar-registreren" class="alslink" type="button">Maak er een</button>.
+      Wachtwoord kwijt? <button id="vergeten" class="alslink" type="button">Stuur mij een nieuw</button>.
+    </p>
+  </section>
+
+  <!-- ============================================ registreren -->
+  <section id="v-registreren" class="vak" hidden>
+    <h1>Een account maken</h1>
+    <p class="uitleg">Gebruik je <b>schoolmail</b>. Kies een wachtwoord dat je kunt onthouden
+      — schrijf het voor alle zekerheid achteraan in je agenda.</p>
+    <form id="form-registreren" autocomplete="on">
+      <label for="r-mail">Jouw schoolmail</label>
+      <input id="r-mail" type="email" required autocomplete="username"
+             autocapitalize="off" spellcheck="false" placeholder="voornaam.naam@kleurenpalet.be">
+
+      <label for="r-voornaam">Jouw voornaam</label>
+      <input id="r-voornaam" type="text" required autocomplete="given-name"
+             autocapitalize="words" placeholder="zo staat het op je scherm">
+
+      <label for="r-traject">In welke groep werk je?</label>
+      <select id="r-traject" required>
+        <option value="1B">traject 1B</option>
+        <option value="1B-vb">traject 1B-vb</option>
+      </select>
+
+      <label for="r-wachtwoord">Kies een wachtwoord <span class="zacht">(minstens 6 tekens)</span></label>
+      <input id="r-wachtwoord" type="password" required minlength="6" autocomplete="new-password">
+
+      <label for="r-wachtwoord2">Typ het nog een keer</label>
+      <input id="r-wachtwoord2" type="password" required minlength="6" autocomplete="new-password">
+
+      <button class="knop groot" type="submit">Account maken</button>
+      <p id="registreerfout" class="fout" hidden></p>
+    </form>
+    <p class="uitleg" style="margin-top:20px">
+      Heb je er al een? <button id="naar-aanmelden" class="alslink" type="button">Aanmelden</button>.
+    </p>
+  </section>
+
+  <!-- ============================================ boodschap -->
+  <section id="v-boodschap" class="vak" hidden>
+    <h1 id="b-titel">Klaar</h1>
+    <p id="b-tekst" class="uitleg"></p>
+    <button id="b-terug" class="knop groot" type="button">Terug</button>
   </section>
 
   <!-- ============================================ keuze -->

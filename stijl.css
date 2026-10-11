@@ -52,7 +52,7 @@ h2{font-size:19px;margin:22px 0 8px}
 
 /* ---------------------------------------------------------------- formulier */
 label{display:block;font-weight:700;margin:16px 0 6px;font-size:17px}
-input[type=text],input[type=password]{
+input[type=text],input[type=password],input[type=email]{
   width:100%;padding:13px 14px;font:inherit;color:inherit;
   background:#fff;border:2px solid var(--lijn);border-radius:10px;
 }
@@ -171,3 +171,16 @@ input:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--pa
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
 }
+
+/* ---------------------------------------------------------------- registreren */
+.alslink{
+  appearance:none;background:none;border:none;padding:0;font:inherit;
+  color:var(--paars);font-weight:700;text-decoration:underline;cursor:pointer;
+}
+.alslink:hover{color:#5c2c7a}
+.zacht{color:var(--grijs);font-weight:400;font-size:15px}
+select{
+  width:100%;padding:13px 14px;font:inherit;color:inherit;
+  background:#fff;border:2px solid var(--lijn);border-radius:10px;
+}
+select:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--paars-licht)}

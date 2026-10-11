@@ -23,7 +23,7 @@ let gedaan = {};      // { '1B-d01|toets': {punten, totaal} }
 let ronde = null;     // de lopende oefening of toets
 
 /* ======================================================= schermen wisselen */
-const SCHERMEN = ["v-aanmelden", "v-keuze", "v-dictee", "v-einde"];
+const SCHERMEN = ["v-aanmelden", "v-registreren", "v-boodschap", "v-keuze", "v-dictee", "v-einde"];
 function toon(id) {
   SCHERMEN.forEach((s) => ($("#" + s).hidden = s !== id));
   window.scrollTo(0, 0);
@@ -127,37 +127,116 @@ function beoordeel(gegeven, juist) {
 }
 
 /* ======================================================= aanmelden */
-function mailVan(voornaam) {
-  const slug = voornaam.trim().toLowerCase()
-    .normalize("NFD").replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]+/g, "");
-  return slug + "@" + CONFIG.MAILDOMEIN;
+function schooladres(mail) {
+  return mail.trim().toLowerCase().endsWith("@" + CONFIG.SCHOOLDOMEIN.toLowerCase());
 }
 
+function meld(vak, tekst) {
+  const p = $("#" + vak);
+  p.textContent = tekst;
+  p.hidden = !tekst;
+}
+
+function boodschap(titel, tekst, terug) {
+  $("#b-titel").textContent = titel;
+  $("#b-tekst").textContent = tekst;
+  $("#b-terug").onclick = () => toon(terug || "v-aanmelden");
+  toon("v-boodschap");
+}
+
+$("#naar-registreren").addEventListener("click", () => { meld("registreerfout", ""); toon("v-registreren"); });
+$("#naar-aanmelden").addEventListener("click", () => { meld("aanmeldfout", ""); toon("v-aanmelden"); });
+
+/* ---- aanmelden */
 $("#form-aanmelden").addEventListener("submit", async (e) => {
   e.preventDefault();
   const knop = e.target.querySelector("button");
-  const fout = $("#aanmeldfout");
-  fout.hidden = true;
-  knop.disabled = true;
-  knop.textContent = "Even geduld…";
+  meld("aanmeldfout", "");
+  knop.disabled = true; knop.textContent = "Even geduld…";
 
   const { error } = await db.auth.signInWithPassword({
-    email: mailVan($("#voornaam").value),
+    email: $("#mail").value.trim().toLowerCase(),
     password: $("#wachtwoord").value,
   });
 
-  knop.disabled = false;
-  knop.textContent = "Aanmelden";
-
+  knop.disabled = false; knop.textContent = "Aanmelden";
   if (error) {
-    fout.textContent = "Dat klopt niet. Kijk je voornaam en je geheime woord nog eens na.";
-    fout.hidden = false;
+    meld("aanmeldfout", error.message && /confirm/i.test(error.message)
+      ? "Je account is nog niet bevestigd. Kijk in je schoolmail."
+      : "Dat klopt niet. Kijk je adres en je wachtwoord nog eens na.");
     $("#wachtwoord").value = "";
     $("#wachtwoord").focus();
     return;
   }
   await naBinnen();
+});
+
+/* ---- registreren */
+$("#form-registreren").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const knop = e.target.querySelector("button");
+  const mail = $("#r-mail").value.trim().toLowerCase();
+  const ww   = $("#r-wachtwoord").value;
+  meld("registreerfout", "");
+
+  if (!schooladres(mail)) {
+    meld("registreerfout", "Gebruik je schoolmail: een adres dat eindigt op @" + CONFIG.SCHOOLDOMEIN + ".");
+    return;
+  }
+  if (ww !== $("#r-wachtwoord2").value) {
+    meld("registreerfout", "De twee wachtwoorden zijn niet hetzelfde. Typ ze nog eens.");
+    $("#r-wachtwoord").value = ""; $("#r-wachtwoord2").value = ""; $("#r-wachtwoord").focus();
+    return;
+  }
+
+  if (e.target.dataset.aanvullen === "1") {          // account bestaat al, enkel de rij nog
+    await zetKlaslijst($("#r-voornaam").value.trim(), $("#r-traject").value);
+    return;
+  }
+
+  knop.disabled = true; knop.textContent = "Even geduld…";
+  const { data, error } = await db.auth.signUp({ email: mail, password: ww });
+  knop.disabled = false; knop.textContent = "Account maken";
+
+  if (error) {
+    meld("registreerfout", /already/i.test(error.message)
+      ? "Met dat adres bestaat er al een account. Meld je gewoon aan."
+      : "Dat lukte niet: " + error.message);
+    return;
+  }
+
+  // Staat e-mailbevestiging aan, dan is er nog geen sessie: eerst de mail.
+  if (!data.session) {
+    boodschap("Kijk in je schoolmail",
+      "Er is een bericht naar " + mail + " gestuurd. Klik op de link erin, en meld je daarna hier aan.");
+    return;
+  }
+  await zetKlaslijst($("#r-voornaam").value.trim(), $("#r-traject").value);
+});
+
+/* ---- de eigen rij in de klaslijst; de database bewaakt het schooldomein */
+async function zetKlaslijst(voornaam, traject) {
+  const { data: { user } } = await db.auth.getUser();
+  const { error } = await db.from("leerling")
+    .upsert({ id: user.id, voornaam, traject, rol: "leerling" });
+  if (error) {
+    meld("registreerfout",
+      "Je account bestaat, maar je kon niet in de klaslijst gezet worden. Zeg het aan de meester. (" +
+      error.message + ")");
+    toon("v-registreren");
+    return;
+  }
+  await naBinnen();
+}
+
+/* ---- wachtwoord vergeten */
+$("#vergeten").addEventListener("click", async () => {
+  const mail = $("#mail").value.trim().toLowerCase();
+  if (!mail) { meld("aanmeldfout", "Typ eerst je schoolmail hierboven, dan stuur ik een nieuw wachtwoord."); return; }
+  const { error } = await db.auth.resetPasswordForEmail(mail, { redirectTo: location.origin + location.pathname });
+  if (error) { meld("aanmeldfout", "Dat lukte niet: " + error.message); return; }
+  boodschap("Kijk in je schoolmail",
+    "Er is een bericht naar " + mail + " gestuurd waarmee je een nieuw wachtwoord kunt kiezen.");
 });
 
 $("#afmelden").addEventListener("click", async () => {
@@ -174,11 +253,18 @@ async function naBinnen() {
     .from("leerling").select("id, voornaam, traject, rol").eq("id", user.id).single();
 
   if (error || !rij) {
-    $("#aanmeldfout").textContent =
-      "Je bent aangemeld, maar je staat nog niet in de klaslijst. Zeg het aan de meester.";
-    $("#aanmeldfout").hidden = false;
-    await db.auth.signOut();
-    toon("v-aanmelden");
+    // wel een account, nog geen rij in de klaslijst - dat gebeurt als de
+    // bevestigingsmail tussendoor kwam. Even de voornaam vragen en aanvullen.
+    const { data: { user: u } } = await db.auth.getUser();
+    $("#r-mail").value = u.email;
+    $("#r-mail").readOnly = true;
+    $("#r-wachtwoord").closest("label").hidden = true;
+    $("#r-wachtwoord").hidden = true; $("#r-wachtwoord").required = false;
+    $("#r-wachtwoord2").closest("label").hidden = true;
+    $("#r-wachtwoord2").hidden = true; $("#r-wachtwoord2").required = false;
+    $("#form-registreren").querySelector("button").textContent = "Dit ben ik";
+    $("#form-registreren").dataset.aanvullen = "1";
+    toon("v-registreren");
     return;
   }
 

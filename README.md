@@ -43,14 +43,18 @@ op dezelfde manier aangevuld.
 
 1. `supabase.com` → New project. Naam `kleurenpalet-1b`, **regio Central EU (Frankfurt)**.
 2. SQL Editor → plak `_setup/01-tabellen.sql` → Run.
-3. Authentication → Providers → Email → **Confirm email UIT**.
-4. Authentication → Users → per leerling een gebruiker:
-   `voornaam@1b.kleurenpalet.intern`, een wachtwoord naar keuze, **Auto Confirm AAN**.
-   Doe hetzelfde voor jezelf, met je echte e-mailadres.
-5. Kopieer van elke gebruiker de User UID, vul ze in `_setup/02-leerlingen.sql` in
-   en draai dat in de SQL Editor.
-6. Project Settings → API: neem de **Project URL** en de **anon public key** over
+3. SQL Editor → plak `_setup/03-registreren.sql` → Run.
+4. Authentication → Providers → Email → **Confirm email**:
+   - **uit**: de leerling kan meteen verder na het registreren (eenvoudigst);
+   - **aan**: hij krijgt eerst een mail op zijn schooladres en moet daarop klikken.
+5. Project Settings → API: de **Project URL** en de **publishable key** staan al
    in `config.js`.
+6. Registreer jezelf via de website, met je schooladres. Maak jezelf daarna meester
+   met de regel onderaan `_setup/03-registreren.sql`.
+
+De leerlingen maken hun eigen account: schoolmail, voornaam, groep, zelfgekozen
+wachtwoord. `_setup/02-leerlingen.sql` heb je dan niet meer nodig — dat is de oude
+manier, met kaartjes.
 
 > De anon-sleutel mag in `config.js` staan — ze is bedoeld om publiek te zijn.
 > De beveiliging zit in de toegangsregels van stap 2. De **service_role**-sleutel
@@ -62,10 +66,15 @@ op dezelfde manier aangevuld.
 2. Build command leeg laten, publish directory `.`.
 3. Deploy. Vanaf dan zet elke wijziging in de repo zichzelf online.
 
-### 3. Aanmeldkaartjes
+### 3. Wie mag binnen
 
-Elke leerling krijgt een kaartje met zijn voornaam en zijn geheime woord. Meer heeft
-hij niet nodig: hij typt zijn voornaam, de app maakt er zelf het adres van.
+Alleen een adres op het schooldomein (`kleurenpalet.be`) kan een account maken, en
+niemand kan zichzelf meester maken. Die twee sloten zitten in de **database**
+(`_setup/03-registreren.sql`), niet in de pagina — wie de website omzeilt en
+rechtstreeks met de sleutel praat, komt er dus ook niet door.
+
+Klopt het domein niet, pas het dan op twee plaatsen aan: `SCHOOLDOMEIN` in
+`config.js` én de regel met `like '%@kleurenpalet.be'` in dat SQL-bestand.
 
 ## Tijdens het jaar
 
