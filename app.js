@@ -33,23 +33,30 @@ function toon(id) {
 const Stem = {
   stem: null,
   klaar: false,
+  aantal: 0,
 
   zoek() {
     const alle = window.speechSynthesis ? speechSynthesis.getVoices() : [];
-    if (!alle.length) return false;
-    // liefst Vlaams, anders Nederlands, anders wat er is
+    if (!alle.length) return false;          // de lijst komt op sommige toestellen pas later
+    this.aantal = alle.length;
+    // liefst Vlaams, anders Nederlands; een Engelse stem gebruiken we NIET,
+    // die spreekt de woorden verkeerd uit en dan oefent de leerling verkeerd
     this.stem =
       alle.find((v) => /^nl[-_]BE/i.test(v.lang)) ||
       alle.find((v) => /^nl/i.test(v.lang)) ||
       null;
     this.klaar = true;
-    if (!this.stem) $("#praat-waarschuwing").hidden = false;
+    $("#praat-waarschuwing").hidden = !!this.stem;
     return true;
   },
 
   start() {
     if (!window.speechSynthesis) { $("#praat-waarschuwing").hidden = false; return; }
-    if (!this.zoek()) speechSynthesis.addEventListener("voiceschanged", () => this.zoek(), { once: true });
+    if (this.zoek()) return;
+    // blijven luisteren tot de lijst er echt is (eenmalig luisteren is te vroeg)
+    const nog = () => { if (this.zoek()) speechSynthesis.removeEventListener("voiceschanged", nog); };
+    speechSynthesis.addEventListener("voiceschanged", nog);
+    setTimeout(nog, 1200);
   },
 
   _zeg(tekst, tempo) {
@@ -526,6 +533,24 @@ async function einde() {
 }
 
 $("#e-terug").addEventListener("click", () => { bouwLijst(); toon("v-keuze"); });
+
+/* ======================================================= stemtest
+   Een knop op het aanmeldscherm: zo kun je op elke schoolcomputer in een
+   tel horen of er een Nederlandse stem op staat, zonder eerst aan te melden. */
+$("#stemtest").addEventListener("click", async () => {
+  const uit = $("#stemuitslag");
+  uit.hidden = false;
+  Stem.zoek();
+  if (!window.speechSynthesis) { uit.textContent = "Deze browser kan niet voorlezen."; return; }
+  if (!Stem.stem) {
+    uit.textContent = "Geen Nederlandse stem gevonden (" + Stem.aantal +
+      " stemmen op dit toestel). Zet in Windows de taal Nederlands (België) bij, met het spraakonderdeel.";
+    return;
+  }
+  uit.textContent = "Stem: " + Stem.stem.name + " (" + Stem.stem.lang + ") — luister…";
+  await Stem.zinEnWoord("Straks begint het dictee.", "dictee");
+  uit.textContent = "Stem: " + Stem.stem.name + " (" + Stem.stem.lang + "). Hoorde je dat? Dan is alles in orde.";
+});
 
 /* ======================================================= start */
 (async function () {
