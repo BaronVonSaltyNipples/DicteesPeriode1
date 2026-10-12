@@ -23,7 +23,7 @@ let gedaan = {};      // { '1B-d01|toets': {punten, totaal} }
 let ronde = null;     // de lopende oefening of toets
 
 /* ======================================================= schermen wisselen */
-const SCHERMEN = ["v-aanmelden", "v-registreren", "v-boodschap", "v-keuze", "v-dictee", "v-einde"];
+const SCHERMEN = ["v-aanmelden", "v-registreren", "v-boodschap", "v-groep", "v-keuze", "v-dictee", "v-einde"];
 function toon(id) {
   SCHERMEN.forEach((s) => ($("#" + s).hidden = s !== id));
   window.scrollTo(0, 0);
@@ -133,6 +133,70 @@ function beoordeel(gegeven, juist) {
   return "mis";
 }
 
+/* ======================================================= groep kiezen
+   Twee knoppen in plaats van een uitklaplijstje: aanklikken is voor een
+   leerling van 1B eenvoudiger, en je ziet meteen in welke groep je zit. */
+const TRAJECTEN = [["1B", "traject 1B"], ["1B-vb", "traject 1B-vb"]];
+
+function trajectKnoppen(vak, nu, bijKlik) {
+  vak.innerHTML = "";
+  TRAJECTEN.forEach(([w, t]) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "trajectknop";
+    b.dataset.traject = w;
+    b.textContent = t;
+    b.setAttribute("aria-pressed", String(w === nu));
+    b.onclick = () => {
+      [...vak.children].forEach((k) => k.setAttribute("aria-pressed", String(k === b)));
+      if (bijKlik) bijKlik(w);
+    };
+    vak.append(b);
+  });
+}
+
+function gekozenTraject(vak) {
+  const b = vak.querySelector('[aria-pressed="true"]');
+  return b ? b.dataset.traject : "1B";
+}
+
+/* Het eerste scherm na het aanmelden: twee grote knoppen, 1B en 1B-vb.
+   De groep waarin de leerling hoort draagt het speldje 'jouw groep'. */
+function toonGroepkeuze() {
+  $("#g-titel").textContent = "Dag " + ik.voornaam + "! In welke groep werk je?";
+  const vak = $("#g-knoppen");
+  vak.innerHTML = "";
+
+  TRAJECTEN.forEach(([w, t]) => {
+    const aantal = (alles[w] || []).length;
+    const woorden = aantal ? (alles[w][0].zinnen.length + " woorden per dictee") : "";
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "groepknop";
+    b.dataset.traject = w;
+    b.innerHTML = `<span class="groot">${veilig(t)}</span>
+      <span class="sub">${veilig(woorden)}</span>
+      ${w === ik.traject ? '<span class="speld klaar">jouw groep</span>' : ""}`;
+    b.onclick = () => kiesTraject(w);
+    vak.append(b);
+  });
+}
+
+/* De keuze wordt bewaard, zodat de meester ziet waar de leerling werkt en de
+   site het de volgende keer onthoudt. Lukt bewaren niet, dan werk je gewoon
+   verder in die groep - het dictee mag daar niet op stuklopen. */
+async function kiesTraject(w) {
+  if (w !== ik.traject) {
+    ik.traject = w;
+    await db.from("leerling").update({ traject: w }).eq("id", ik.id);
+  }
+  $("#k-groep").innerHTML =
+    "Je werkt in <b>" + veilig(w === "1B-vb" ? "traject 1B-vb" : "traject 1B") + "</b>. " +
+    "Doe eerst de <b>oefening</b>. Lukt dat goed? Dan mag je de <b>toets</b> doen.";
+  bouwLijst();
+  toon("v-keuze");
+}
+
 /* ======================================================= aanmelden */
 function schooladres(mail) {
   return mail.trim().toLowerCase().endsWith("@" + CONFIG.SCHOOLDOMEIN.toLowerCase());
@@ -213,7 +277,7 @@ $("#form-registreren").addEventListener("submit", async (e) => {
   }
 
   if (e.target.dataset.aanvullen === "1") {          // account bestaat al, enkel de rij nog
-    await zetKlaslijst($("#r-voornaam").value.trim(), $("#r-traject").value);
+    await zetKlaslijst($("#r-voornaam").value.trim(), gekozenTraject($("#r-traject")));
     return;
   }
 
@@ -235,7 +299,7 @@ $("#form-registreren").addEventListener("submit", async (e) => {
       "Er is een bericht naar " + mail + " gestuurd. Klik op de link erin, en meld je daarna hier aan.");
     return;
   }
-  await zetKlaslijst($("#r-voornaam").value.trim(), $("#r-traject").value);
+  await zetKlaslijst($("#r-voornaam").value.trim(), gekozenTraject($("#r-traject")));
 });
 
 /* ---- de eigen rij in de klaslijst; de database bewaakt het schooldomein */
@@ -300,8 +364,8 @@ async function naBinnen() {
   const [o, g] = await Promise.all([haalOpen(), haalGedaan()]);
   open = o; gedaan = g;
 
-  bouwLijst();
-  toon("v-keuze");
+  toonGroepkeuze();
+  toon("v-groep");
 }
 
 async function haalOpen() {
@@ -550,6 +614,7 @@ async function einde() {
 }
 
 $("#e-terug").addEventListener("click", () => { bouwLijst(); toon("v-keuze"); });
+$("#k-andere").addEventListener("click", () => { toonGroepkeuze(); toon("v-groep"); });
 
 /* ======================================================= stemtest
    Een knop op het aanmeldscherm: zo kun je op elke schoolcomputer in een
@@ -572,6 +637,7 @@ $("#stemtest").addEventListener("click", async () => {
 /* ======================================================= start */
 (async function () {
   Stem.start();
+  trajectKnoppen($("#r-traject"), "1B");
   try {
     alles = await (await fetch("dictees.json")).json();
   } catch (e) {

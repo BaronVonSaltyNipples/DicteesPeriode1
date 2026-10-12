@@ -197,3 +197,19 @@ select:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--p
 .trajectknop:hover{background:var(--paars-licht)}
 .trajectknop[aria-pressed=true]{background:var(--paars);color:#fff;border-color:var(--paars)}
 .trajectknop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+
+/* ---------------------------------------------------------------- groepkeuze */
+.groepkeuze{display:grid;gap:14px;margin-top:4px}
+.groepknop{
+  appearance:none;font:inherit;cursor:pointer;text-align:left;
+  background:#fff;color:var(--navy);border:2px solid var(--lijn);
+  border-radius:14px;padding:20px 22px;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  transition:border-color .15s ease, background .15s ease;
+}
+.groepknop:hover{border-color:var(--paars);background:var(--paars-licht)}
+.groepknop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.groepknop .groot{font-size:25px;font-weight:700;color:var(--paars)}
+.groepknop .sub{color:var(--grijs);font-size:16px}
+.groepknop .speld{margin-left:auto}
+@media (min-width:560px){ .groepkeuze{grid-template-columns:1fr 1fr} }
