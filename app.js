@@ -26,6 +26,13 @@ let ronde = null;     // de lopende oefening of toets
    Elke afgewerkte oefening wordt bewaard; stoppen halverwege telt niet mee. */
 const MAX_OEFEN = 2;
 
+/* De flitskaart: bij een oefening mag de leerling het woord twee keer kort zien.
+   Hij ziet en hoort het dan samen - kijken, de kaart weg, en zelf schrijven.
+   Bij een toets is er geen flitskaart; die moet hij op het gehoor doen. */
+const MAX_FLITS = 2;
+const FLITSTIJD = 3500;
+let flitsTimer = null;
+
 /* ======================================================= schermen wisselen */
 const SCHERMEN = ["v-aanmelden", "v-registreren", "v-boodschap", "v-groep", "v-keuze", "v-dictee", "v-einde"];
 function toon(id) {
@@ -457,6 +464,7 @@ function startDictee(dictee, soort) {
     dictee, soort,
     rij: hussel(dictee.zinnen, zaad),
     nu: 0,
+    gezien: [],
     punten: 0,
     fouten: [],
     begonnen: new Date().toISOString(),
@@ -483,6 +491,8 @@ function toonWoord() {
   $("#d-verder").disabled = false;
   $("#d-verder").textContent = ronde.soort === "toets" ? "Verder" : "Nakijken";
   $("#d-oordeel").hidden = true;
+  kaartWeg();
+  zetFlitsknop();
   invul.focus();
 
   // meteen voorlezen
@@ -510,6 +520,47 @@ function metGat(zin, woord) {
   }
   return veilig(zin);
 }
+
+function zetFlitsknop() {
+  const b = $("#d-flits");
+  b.hidden = ronde.soort !== "oefening";
+  const k = ronde.gezien[ronde.nu] || 0;
+  b.textContent =
+    k === 0 ? "Bekijk het woord" :
+    k < MAX_FLITS ? "Nog " + (MAX_FLITS - k) + " keer bekijken" :
+    "2 keer bekeken";
+  b.disabled = k >= MAX_FLITS;
+}
+
+function kaartWeg() {
+  clearTimeout(flitsTimer);
+  const kaart = $("#d-kaart");
+  kaart.hidden = true;
+  kaart.classList.remove("loopt");
+}
+
+function flits() {
+  if (ronde.soort !== "oefening") return;
+  const k = ronde.gezien[ronde.nu] || 0;
+  if (k >= MAX_FLITS) return;
+  ronde.gezien[ronde.nu] = k + 1;
+  zetFlitsknop();
+
+  const woord = ronde.rij[ronde.nu].woord;
+  $("#d-kaartwoord").textContent = woord;
+  const kaart = $("#d-kaart");
+  clearTimeout(flitsTimer);
+  kaart.hidden = false;
+  kaart.classList.remove("loopt");
+  void kaart.offsetWidth;                  // de balk opnieuw laten lopen
+  kaart.classList.add("loopt");
+
+  Stem.enkelWoord(woord);                  // zien en horen samen
+
+  flitsTimer = setTimeout(() => { kaartWeg(); $("#d-invul").focus(); }, FLITSTIJD);
+}
+
+$("#d-flits").addEventListener("click", flits);
 
 let praat = false;
 async function luister() {
@@ -539,6 +590,7 @@ $("#d-invul").addEventListener("drop", (e) => e.preventDefault());
 $("#form-woord").addEventListener("submit", (e) => {
   e.preventDefault();
   Stem.stil();
+  kaartWeg();
   const item = ronde.rij[ronde.nu];
   const gegeven = $("#d-invul").value;
   const oordeel = beoordeel(gegeven, item.woord);
@@ -581,6 +633,7 @@ function volgende() {
 $("#d-stop").addEventListener("click", () => {
   if (!confirm("Stoppen? Wat je al deed, wordt niet bewaard.")) return;
   Stem.stil();
+  kaartWeg();
   ronde = null;
   toon("v-keuze");
 });
@@ -588,6 +641,7 @@ $("#d-stop").addEventListener("click", () => {
 /* ======================================================= einde */
 async function einde() {
   Stem.stil();
+  kaartWeg();
   const n = ronde.rij.length;
   const p = ronde.punten;
 

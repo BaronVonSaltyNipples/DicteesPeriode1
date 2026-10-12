@@ -213,3 +213,24 @@ select:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--p
 .groepknop .sub{color:var(--grijs);font-size:16px}
 .groepknop .speld{margin-left:auto}
 @media (min-width:560px){ .groepkeuze{grid-template-columns:1fr 1fr} }
+
+/* ---------------------------------------------------------------- flitskaart */
+.flitskaart{
+  margin:0 0 18px;padding:26px 20px 18px;border-radius:14px;
+  background:var(--paars);color:#fff;text-align:center;
+  box-shadow:var(--schaduw);
+  animation:flitsin .16s ease-out;
+}
+.flitskaart span:first-child{
+  display:block;font-size:46px;font-weight:700;line-height:1.1;
+  letter-spacing:.01em;word-break:break-word;
+}
+.flitsbalk{
+  display:block;height:6px;margin-top:18px;border-radius:999px;
+  background:rgba(255,255,255,.3);overflow:hidden;
+}
+.flitsbalk i{display:block;height:100%;width:100%;background:#fff;border-radius:999px}
+.flitskaart.loopt .flitsbalk i{animation:flitsweg 3.5s linear forwards}
+@keyframes flitsin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes flitsweg{from{width:100%}to{width:0}}
+@media (max-width:520px){ .flitskaart span:first-child{font-size:38px} }

@@ -114,11 +114,17 @@
 
     <p id="d-zin" class="zin"></p>
 
+    <div id="d-kaart" class="flitskaart" hidden aria-live="polite">
+      <span id="d-kaartwoord"></span>
+      <span class="flitsbalk"><i></i></span>
+    </div>
+
     <div class="knoppen">
       <button id="d-luister" class="knop groot luister" type="button">
         <span class="luidspreker" aria-hidden="true"></span> Luister
       </button>
       <button id="d-nogeens" class="knop stil" type="button">Nog eens het woord</button>
+      <button id="d-flits" class="knop stil" type="button" hidden>Bekijk het woord</button>
     </div>
 
     <form id="form-woord" autocomplete="off">
