@@ -243,7 +243,7 @@ async function wisRij(r, knop) {
   const vraag = `De ${r.soort} van ${naamVan(r.leerling_id)} bij "${titelVan(r.dictee)}" wissen?\n` +
                 (r.soort === "toets"
                   ? "Hij mag die toets daarna opnieuw maken."
-                  : "Hij krijgt er daarmee een oefenbeurt bij.");
+                  : "Hij krijgt er daarmee een oefenbeurt bij, met verse kijkbeurten voor de flitskaart.");
   if (!confirm(vraag)) return;
 
   knop.disabled = true;
@@ -254,6 +254,13 @@ async function wisRij(r, knop) {
           "\n\nStaat _setup/04-meester-rechten.sql al gedraaid?");
     return;
   }
+
+  // bij een oefening ook de kijkbeurten van de flitskaart vrijgeven
+  if (r.soort === "oefening") {
+    await db.from("flits_gezien").delete()
+      .eq("leerling_id", r.leerling_id).eq("dictee", r.dictee);
+  }
+
   resultaten = resultaten.filter((x) => x.id !== r.id);
   teken();
 }

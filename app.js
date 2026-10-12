@@ -28,7 +28,10 @@ const MAX_OEFEN = 2;
 
 /* De flitskaart: bij een oefening mag de leerling het woord twee keer kort zien.
    Hij ziet en hoort het dan samen - kijken, de kaart weg, en zelf schrijven.
-   Bij een toets is er geen flitskaart; die moet hij op het gehoor doen. */
+   Bij een toets is er geen flitskaart; die moet hij op het gehoor doen.
+
+   De teller staat in de database (tabel flits_gezien), niet in het scherm:
+   twee keer per woord per dictee, ook als hij opnieuw begint of herlaadt. */
 const MAX_FLITS = 2;
 const FLITSTIJD = 4500;
 let flitsTimer = null;
@@ -457,7 +460,10 @@ function veilig(t) {
 }
 
 /* ======================================================= een dictee doen */
-function startDictee(dictee, soort) {
+async function startDictee(dictee, soort) {
+  // de kijkbeurten van dit dictee ophalen; bij een toets is er geen flitskaart
+  const gezien = soort === "oefening" ? await haalFlits(dictee) : {};
+
   const poging = Date.now();
   const zaad = zaadje(ik.id + "|" + dictee.id + "|" + soort + "|" +
                       (soort === "toets" ? dictee.id : poging));
@@ -465,7 +471,7 @@ function startDictee(dictee, soort) {
     dictee, soort,
     rij: hussel(dictee.zinnen, zaad),
     nu: 0,
-    gezien: [],
+    flits: gezien,
     punten: 0,
     fouten: [],
     begonnen: new Date().toISOString(),
@@ -522,10 +528,26 @@ function metGat(zin, woord) {
   return veilig(zin);
 }
 
+async function haalFlits(dictee) {
+  const uit = {};
+  const { data } = await db
+    .from("flits_gezien")
+    .select("nummer, aantal")
+    .eq("leerling_id", ik.id)
+    .eq("dictee", dictee.id);
+  (data || []).forEach((r) => (uit[r.nummer] = r.aantal));
+  return uit;
+}
+
+/* Het nummer van het woord in het dictee zelf - niet de plaats in de gehusselde
+   rij, en niet het woord: hetzelfde woord komt soms twee keer voor. */
+function nummerNu() { return ronde.dictee.zinnen.indexOf(ronde.rij[ronde.nu]); }
+function gezienNu()  { return ronde.flits[nummerNu()] || 0; }
+
 function zetFlitsknop() {
   const b = $("#d-flits");
   b.hidden = ronde.soort !== "oefening";
-  const k = ronde.gezien[ronde.nu] || 0;
+  const k = gezienNu();
   b.textContent =
     k === 0 ? "Bekijk het woord" :
     k < MAX_FLITS ? "Nog " + (MAX_FLITS - k) + " keer bekijken" :
@@ -544,10 +566,17 @@ function kaartWeg() {
 
 function flits() {
   if (ronde.soort !== "oefening") return;
-  const k = ronde.gezien[ronde.nu] || 0;
+  const nr = nummerNu();
+  const k = ronde.flits[nr] || 0;
   if (k >= MAX_FLITS) return;
-  ronde.gezien[ronde.nu] = k + 1;
+  ronde.flits[nr] = k + 1;
   zetFlitsknop();
+
+  // meteen bewaren; lukt dat niet, dan blijft de teller in dit scherm staan
+  db.from("flits_gezien")
+    .upsert({ leerling_id: ik.id, dictee: ronde.dictee.id, nummer: nr, aantal: k + 1 },
+            { onConflict: "leerling_id,dictee,nummer" })
+    .then(() => {});
 
   const woord = ronde.rij[ronde.nu].woord;
   const kaart = $("#d-kaart");

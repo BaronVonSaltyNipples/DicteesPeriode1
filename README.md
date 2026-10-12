@@ -6,8 +6,15 @@ over te schrijven, en de volgorde van de woorden verschilt per leerling.
 
 Twee soorten:
 
-- **oefening** — meteen groen of rood, je mag opnieuw, telt niet mee;
-- **toets** — één keer, geen hulp, de score gaat naar het meesterscherm.
+- **oefening** — meteen groen of rood, twee beurten per dictee. Bij elk woord mag je
+  de **flitskaart** twee keer gebruiken: je ziet en hoort het woord vier en een halve
+  seconde, daarna schrijf je het zelf. Die teller staat in de database, dus herladen
+  of opnieuw beginnen geeft geen extra kijkbeurten.
+- **toets** — één keer, geen flitskaart, de score gaat naar het meesterscherm.
+  Een gemaakte toets staat op slot tot jij hem wist.
+
+Een afwijkende hoofdletter telt als juist; bij een oefening krijgt de leerling er wel
+een opmerking over.
 
 ## Wat waar staat
 
@@ -44,7 +51,8 @@ op dezelfde manier aangevuld.
 1. `supabase.com` → New project. Naam `kleurenpalet-1b`, **regio Central EU (Frankfurt)**.
 2. SQL Editor → plak `_setup/01-tabellen.sql` → Run.
 3. SQL Editor → plak `_setup/03-registreren.sql` → Run.
-   Daarna `_setup/04-meester-rechten.sql` → Run (voor de knoppen *goedkeuren* en *wissen*).
+   Daarna `_setup/04-meester-rechten.sql` → Run (voor de knoppen *goedkeuren* en *wissen*)
+   en `_setup/05-flitskaart.sql` → Run (de teller van de flitskaart).
 4. Authentication → Providers → Email → **Confirm email**:
    - **uit**: de leerling kan meteen verder na het registreren (eenvoudigst);
    - **aan**: hij krijgt eerst een mail op zijn schooladres en moet daarop klikken.
