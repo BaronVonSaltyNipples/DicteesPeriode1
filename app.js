@@ -22,6 +22,10 @@ let open = {};        // { '1B': 6, '1B-vb': 6 }
 let gedaan = {};      // { '1B-d01|toets': {punten, totaal} }
 let ronde = null;     // de lopende oefening of toets
 
+/* Hoe vaak een leerling een dictee mag oefenen voor hij de toets doet.
+   Elke afgewerkte oefening wordt bewaard; stoppen halverwege telt niet mee. */
+const MAX_OEFEN = 2;
+
 /* ======================================================= schermen wisselen */
 const SCHERMEN = ["v-aanmelden", "v-registreren", "v-boodschap", "v-groep", "v-keuze", "v-dictee", "v-einde"];
 function toon(id) {
@@ -163,7 +167,6 @@ function gekozenTraject(vak) {
 /* Het eerste scherm na het aanmelden: twee grote knoppen, 1B en 1B-vb.
    De groep waarin de leerling hoort draagt het speldje 'jouw groep'. */
 function toonGroepkeuze() {
-  $("#g-titel").textContent = "Dag " + ik.voornaam + "! In welke groep werk je?";
   const vak = $("#g-knoppen");
   vak.innerHTML = "";
 
@@ -192,7 +195,7 @@ async function kiesTraject(w) {
   }
   $("#k-groep").innerHTML =
     "Je werkt in <b>" + veilig(w === "1B-vb" ? "traject 1B-vb" : "traject 1B") + "</b>. " +
-    "Doe eerst de <b>oefening</b>. Lukt dat goed? Dan mag je de <b>toets</b> doen.";
+    "Je mag <b>twee keer oefenen</b>. Lukt dat goed? Dan mag je de <b>toets</b> doen.";
   bouwLijst();
   toon("v-keuze");
 }
@@ -384,9 +387,18 @@ async function haalGedaan() {
   const uit = {};
   (data || []).forEach((r) => {
     const sleutel = r.dictee + "|" + r.soort;
-    if (!uit[sleutel]) uit[sleutel] = r;   // het meest recente
+    if (!uit[sleutel]) uit[sleutel] = { ...r, aantal: 0 };  // het meest recente
+    uit[sleutel].aantal++;
   });
   return uit;
+}
+
+function keerGeoefend(dictee) {
+  const r = gedaan[dictee.id + "|oefening"];
+  return r ? r.aantal : 0;
+}
+function magNogOefenen(dictee) {
+  return keerGeoefend(dictee) < MAX_OEFEN;
 }
 
 /* ======================================================= de lijst */
@@ -407,9 +419,14 @@ function bouwLijst() {
       ${toets ? `<span class="speld klaar">toets: ${toets.punten}/${toets.totaal}</span>` : ""}
       <span class="sub">${d.zinnen.length} woorden</span>`;
 
+    const keer = keerGeoefend(d);
     const oef = document.createElement("button");
     oef.className = "knop stil";
-    oef.textContent = "Oefenen";
+    oef.textContent =
+      keer === 0 ? "Oefenen" :
+      keer < MAX_OEFEN ? "Nog " + (MAX_OEFEN - keer) + " keer oefenen" :
+      "2 keer geoefend";
+    oef.disabled = keer >= MAX_OEFEN;
     oef.onclick = () => startDictee(d, "oefening");
 
     const tst = document.createElement("button");
@@ -597,17 +614,23 @@ async function einde() {
 
   $("#e-opnieuw").onclick = () => startDictee(ronde.dictee, "oefening");
 
-  if (ronde.soort === "toets") {
-    await db.from("dictee_resultaat").insert({
-      leerling_id: ik.id,
-      dictee: ronde.dictee.id,
-      traject: ik.traject,
-      soort: "toets",
-      punten: p,
-      totaal: n,
-      fouten: ronde.fouten,
-    });
-    gedaan = await haalGedaan();
+  await db.from("dictee_resultaat").insert({
+    leerling_id: ik.id,
+    dictee: ronde.dictee.id,
+    traject: ik.traject,
+    soort: ronde.soort,
+    punten: p,
+    totaal: n,
+    fouten: ronde.fouten,
+  });
+  gedaan = await haalGedaan();
+
+  // nog eens oefenen mag, zolang de twee beurten niet op zijn
+  const nog = magNogOefenen(ronde.dictee);
+  $("#e-opnieuw").hidden = !nog;
+  if (!nog && ronde.soort === "oefening") {
+    $("#e-boodschap").textContent +=
+      " Je hebt dit dictee twee keer geoefend. Nu mag je de toets doen.";
   }
 
   toon("v-einde");
