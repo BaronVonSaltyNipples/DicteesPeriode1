@@ -137,12 +137,15 @@ function hussel(rij, zaad) {
 function schoon(t) {
   return (t || "").trim().replace(/\s+/g, " ").replace(/[.…]+$/, "");
 }
+/* 'hoofdletter' telt als JUIST: het woord is goed geschreven, alleen de
+   hoofdletter wijkt af. Bij een oefening zegt de app er wel iets over. */
 function beoordeel(gegeven, juist) {
   const a = schoon(gegeven), b = schoon(juist);
   if (a === b) return "goed";
   if (a.toLowerCase() === b.toLowerCase()) return "hoofdletter";
   return "mis";
 }
+function isJuist(oordeel) { return oordeel !== "mis"; }
 
 /* ======================================================= groep kiezen
    Twee knoppen in plaats van een uitklaplijstje: aanklikken is voor een
@@ -598,14 +601,14 @@ $("#form-woord").addEventListener("submit", (e) => {
   const gegeven = $("#d-invul").value;
   const oordeel = beoordeel(gegeven, item.woord);
 
-  if (oordeel === "goed") ronde.punten++;
+  if (isJuist(oordeel)) ronde.punten++;
   else ronde.fouten.push({ zin: item.zin, juist: item.woord, gegeven: schoon(gegeven), soort: oordeel });
 
   if (ronde.soort === "oefening") {
     toonOordeel(oordeel, item.woord);
     $("#d-invul").disabled = true;
     $("#d-verder").disabled = true;
-    setTimeout(volgende, oordeel === "goed" ? 1100 : 2600);
+    setTimeout(volgende, oordeel === "goed" ? 1100 : oordeel === "hoofdletter" ? 1900 : 2600);
   } else {
     volgende();
   }
@@ -618,9 +621,9 @@ function toonOordeel(oordeel, juist) {
     p.className = "oordeel goed";
     p.textContent = "Juist!";
   } else if (oordeel === "hoofdletter") {
-    p.className = "oordeel mis";
-    p.innerHTML = "Bijna — let op de hoofdletter." +
-      `<span class="juist">Het is: <b>${veilig(juist)}</b></span>`;
+    p.className = "oordeel goed";
+    p.innerHTML = "Juist!" +
+      `<span class="juist">Kijk wel even naar de hoofdletter: <b>${veilig(juist)}</b></span>`;
   } else {
     p.className = "oordeel mis";
     p.innerHTML = "Niet juist." + `<span class="juist">Het is: <b>${veilig(juist)}</b></span>`;

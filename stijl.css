@@ -132,6 +132,7 @@ input:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--pa
 .oordeel.mis{background:var(--rood-licht);color:var(--rood)}
 .oordeel .juist{display:block;font-weight:400;color:var(--navy);margin-top:4px;font-size:17px}
 .oordeel .juist b{color:var(--rood)}
+.oordeel.goed .juist b{color:var(--groen)}
 
 /* ---------------------------------------------------------------- einde */
 .score{font-size:42px;font-weight:700;margin:6px 0 2px}
