@@ -235,3 +235,18 @@ select:focus{outline:none;border-color:var(--paars);box-shadow:0 0 0 4px var(--p
 @keyframes flitsin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @keyframes flitsweg{from{width:100%}to{width:0}}
 @media (max-width:520px){ .flitskaart span:first-child{font-size:38px} }
+
+/* ---------------------------------------------------------------- foutknop */
+.foutknop{
+  appearance:none;font:inherit;font-size:15px;cursor:pointer;
+  background:var(--rood-licht);border:2px solid transparent;border-radius:999px;
+  padding:3px 11px;margin:2px 4px 2px 0;
+  display:inline-flex;align-items:baseline;gap:6px;
+}
+.foutknop:hover{background:var(--groen-licht);border-color:var(--groen)}
+.foutknop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.foutknop .jij{color:var(--rood);text-decoration:line-through}
+.foutknop .pijl{color:var(--grijs)}
+.foutknop .moet{font-weight:700;color:var(--navy)}
+.foutknop:hover .jij{text-decoration:none;color:var(--groen)}
+.foutknop[disabled]{opacity:.45;cursor:default}

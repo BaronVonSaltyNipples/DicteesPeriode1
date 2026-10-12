@@ -164,16 +164,98 @@ function teken() {
   rij.forEach((r) => {
     const tr = document.createElement("tr");
     if (r.soort === "toets") tr.className = "rij-toets";
-    const fouten = (r.fouten || []).map((f) => `${f.gegeven || "—"} → ${f.juist}`).join(" · ");
-    tr.innerHTML = `
-      <td>${veilig(naamVan(r.leerling_id))}</td>
-      <td>${veilig(titelVan(r.dictee))}</td>
-      <td>${veilig(r.soort)}</td>
-      <td class="nr">${r.punten}/${r.totaal}</td>
-      <td>${new Date(r.gemaakt).toLocaleString("nl-BE", { dateStyle: "short", timeStyle: "short" })}</td>
-      <td>${veilig(fouten)}</td>`;
+
+    const cel = (inhoud, klasse) => {
+      const td = document.createElement("td");
+      if (klasse) td.className = klasse;
+      if (typeof inhoud === "string") td.textContent = inhoud;
+      else if (inhoud) td.append(inhoud);
+      tr.append(td);
+      return td;
+    };
+
+    cel(naamVan(r.leerling_id));
+    cel(titelVan(r.dictee));
+    cel(r.soort);
+    cel(`${r.punten}/${r.totaal}`, "nr");
+    cel(new Date(r.gemaakt).toLocaleString("nl-BE", { dateStyle: "short", timeStyle: "short" }));
+
+    // ---- de fouten: elk antwoord is een knop waarmee je het alsnog goedkeurt
+    const tdF = cel(null);
+    if (!(r.fouten || []).length) {
+      tdF.textContent = "—";
+    } else {
+      r.fouten.forEach((f, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "foutknop";
+        b.title = "Dit antwoord alsnog goedkeuren";
+        b.innerHTML = `<span class="jij">${veilig(f.gegeven || "niets")}</span>
+                       <span class="pijl">→</span>
+                       <span class="moet">${veilig(f.juist)}</span>`;
+        b.onclick = () => keurGoed(r, i, b);
+        tdF.append(b);
+      });
+    }
+
+    // ---- wissen: daarna mag de leerling dat dictee opnieuw maken
+    const tdW = cel(null, "nr");
+    const w = document.createElement("button");
+    w.type = "button";
+    w.className = "knop klein stil";
+    w.textContent = "Wissen";
+    w.onclick = () => wisRij(r, w);
+    tdW.append(w);
+
     tb.append(tr);
   });
+}
+
+/* Een antwoord dat de app fout rekende, alsnog goedkeuren. Het punt gaat erbij
+   en het woord verdwijnt uit de foutenlijst - ook die van de leerling. */
+async function keurGoed(r, i, knop) {
+  const f = r.fouten[i];
+  const vraag = `"${f.gegeven || "niets ingevuld"}" goedkeuren voor "${f.juist}"?\n` +
+                `${naamVan(r.leerling_id)} krijgt er een punt bij: ${r.punten + 1}/${r.totaal}.`;
+  if (!confirm(vraag)) return;
+
+  knop.disabled = true;
+  const over = r.fouten.filter((_, k) => k !== i);
+  const punten = r.punten + 1;              // een keer uitrekenen, niet twee keer optellen
+  const { error } = await db.from("dictee_resultaat")
+    .update({ punten, fouten: over })
+    .eq("id", r.id);
+
+  if (error) {
+    knop.disabled = false;
+    alert("Goedkeuren lukte niet: " + error.message +
+          "\n\nStaat _setup/04-meester-rechten.sql al gedraaid?");
+    return;
+  }
+  r.punten = punten;
+  r.fouten = over;
+  teken();
+}
+
+/* Een resultaat wissen. Bij een toets staat die daarna weer open voor de
+   leerling; bij een oefening krijgt hij er een oefenbeurt bij. */
+async function wisRij(r, knop) {
+  const vraag = `De ${r.soort} van ${naamVan(r.leerling_id)} bij "${titelVan(r.dictee)}" wissen?\n` +
+                (r.soort === "toets"
+                  ? "Hij mag die toets daarna opnieuw maken."
+                  : "Hij krijgt er daarmee een oefenbeurt bij.");
+  if (!confirm(vraag)) return;
+
+  knop.disabled = true;
+  const { error } = await db.from("dictee_resultaat").delete().eq("id", r.id);
+  if (error) {
+    knop.disabled = false;
+    alert("Wissen lukte niet: " + error.message +
+          "\n\nStaat _setup/04-meester-rechten.sql al gedraaid?");
+    return;
+  }
+  resultaten = resultaten.filter((x) => x.id !== r.id);
+  teken();
 }
 
 $("#f-leerling").addEventListener("change", teken);

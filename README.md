@@ -44,6 +44,7 @@ op dezelfde manier aangevuld.
 1. `supabase.com` → New project. Naam `kleurenpalet-1b`, **regio Central EU (Frankfurt)**.
 2. SQL Editor → plak `_setup/01-tabellen.sql` → Run.
 3. SQL Editor → plak `_setup/03-registreren.sql` → Run.
+   Daarna `_setup/04-meester-rechten.sql` → Run (voor de knoppen *goedkeuren* en *wissen*).
 4. Authentication → Providers → Email → **Confirm email**:
    - **uit**: de leerling kan meteen verder na het registreren (eenvoudigst);
    - **aan**: hij krijgt eerst een mail op zijn schooladres en moet daarop klikken.
@@ -82,6 +83,10 @@ Klopt het domein niet, pas het dan op twee plaatsen aan: `SCHOOLDOMEIN` in
   zien enkel wat opengezet is.
 - **Resultaten bekijken**: `meester.html`, met een filter per leerling of per dictee,
   en een knop om alles als CSV te bewaren.
+- **Een antwoord alsnog goedkeuren**: klik in de kolom *Fouten* op dat antwoord. Het punt
+  gaat erbij en het woord verdwijnt uit de foutenlijst, ook bij de leerling.
+- **Een resultaat wissen**: de knop *Wissen* achteraan de rij. Bij een toets staat die
+  daarna weer open voor de leerling; bij een oefening krijgt hij er een oefenbeurt bij.
 - **Een dictee toevoegen of wijzigen**: pas `dictees.json` aan. Elke zin is
   `{ "zin": "...", "woord": "..." }`, waarbij `woord` letterlijk in `zin` moet staan —
   daar komt het gat.
