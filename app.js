@@ -30,7 +30,7 @@ const MAX_OEFEN = 2;
    Hij ziet en hoort het dan samen - kijken, de kaart weg, en zelf schrijven.
    Bij een toets is er geen flitskaart; die moet hij op het gehoor doen. */
 const MAX_FLITS = 2;
-const FLITSTIJD = 3500;
+const FLITSTIJD = 4500;
 let flitsTimer = null;
 
 /* ======================================================= schermen wisselen */
@@ -438,11 +438,9 @@ function bouwLijst() {
 
     const tst = document.createElement("button");
     tst.className = "knop";
-    tst.textContent = toets ? "Toets opnieuw" : "Toets";
-    tst.onclick = () => {
-      if (toets && !confirm("Je deed deze toets al. Nog een keer doen? De nieuwe score telt.")) return;
-      startDictee(d, "toets");
-    };
+    tst.textContent = toets ? "Toets gemaakt" : "Toets";
+    tst.disabled = !!toets;                 // een toets doe je een keer
+    tst.onclick = () => startDictee(d, "toets");
 
     kaart.append(oef, tst);
     lijst.append(kaart);
@@ -535,7 +533,9 @@ function zetFlitsknop() {
 function kaartWeg() {
   clearTimeout(flitsTimer);
   const kaart = $("#d-kaart");
+  if (!kaart) return;
   kaart.hidden = true;
+  kaart.style.display = "none";
   kaart.classList.remove("loopt");
 }
 
@@ -547,13 +547,16 @@ function flits() {
   zetFlitsknop();
 
   const woord = ronde.rij[ronde.nu].woord;
-  $("#d-kaartwoord").textContent = woord;
   const kaart = $("#d-kaart");
+  $("#d-kaartwoord").textContent = woord;
+
   clearTimeout(flitsTimer);
   kaart.hidden = false;
+  kaart.style.display = "block";           // niet alleen op 'hidden' vertrouwen
   kaart.classList.remove("loopt");
   void kaart.offsetWidth;                  // de balk opnieuw laten lopen
   kaart.classList.add("loopt");
+  if (kaart.scrollIntoView) kaart.scrollIntoView({ block: "nearest" });
 
   Stem.enkelWoord(woord);                  // zien en horen samen
 
@@ -681,6 +684,7 @@ async function einde() {
 
   // nog eens oefenen mag, zolang de twee beurten niet op zijn
   const nog = magNogOefenen(ronde.dictee);
+  $("#e-opnieuw").textContent = "Nog eens oefenen";
   $("#e-opnieuw").hidden = !nog;
   if (!nog && ronde.soort === "oefening") {
     $("#e-boodschap").textContent +=
